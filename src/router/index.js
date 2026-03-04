@@ -43,7 +43,16 @@ const routes = [
           title: '',
         },
         component: () => import('@/pages/dashboard/AboutUs/index.vue')
+      },
+      {
+        "path": "/Blog",
+        "name": "Blog",
+        "meta": {
+          title: '',
+        },
+        component: () => import('@/pages/dashboard/Blog/index.vue')
       }
+      
     ]
   },
   {
@@ -104,8 +113,16 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  // 配置滚动行为，使页面切换时滚动条重置为0
+  scrollBehavior(to, from, savedPosition) {
+    // 如果有保存的位置，则恢复到该位置
+    if (savedPosition) {
+      return savedPosition
+    }
+    // 否则滚动到顶部
+    return { top: 0, left: 0 }
+  }
 })
 
 export default router
-

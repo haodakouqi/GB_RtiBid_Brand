@@ -34,7 +34,7 @@
     <router-view v-slot="{ Component, route }">
       <component :is="Component" :key="route.fullPath" />
     </router-view>
-    <Footer></Footer>
+    <Footer :navList="navList"></Footer>
   </div>
 </template>
 
@@ -46,6 +46,11 @@ import Footer from './Footer.vue'
 
 import { GlHookuseRouter } from '@/utils/methods'
 const router = GlHookuseRouter()
+
+// 锚点平滑滚动方法
+const handleScroll = (id) => {
+  router.push(id)
+}
 
 const navList = ref([
   {
@@ -62,7 +67,7 @@ const navList = ref([
   },
   {
     name: 'Blog',
-    id: 'technology22'
+    id: 'Blog'
   }
 ])
 
@@ -96,10 +101,6 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-// 锚点平滑滚动方法
-const handleScroll = (id) => {
-  router.push(id)
-}
 
 </script>
 

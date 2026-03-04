@@ -6,13 +6,13 @@
           <img :src="logoImg" alt="RTiBid Logo" class="footer-logo" />
           <p class="footer-desc">Connect, track, and grow At Rtibid, you only pay for real results.</p>
           <div class="social-group">
-            <a href="#" class="social-item">
+            <a href="javascript:void(0);" class="social-item">
               <img :src="footerlogo0" alt="social icon" class="social-icon" />
             </a>
-            <a href="#" class="social-item">
+            <a href="javascript:void(0);" class="social-item">
               <img :src="footerlogo1" alt="social icon" class="social-icon" />
             </a>
-            <a href="#" class="social-item">
+            <a href="javascript:void(0);" class="social-item">
               <img :src="footerlogo2" alt="social icon" class="social-icon" />
             </a>
           </div>
@@ -20,16 +20,15 @@
         <div class="footer-col footer-pages">
           <h4 class="footer-title">Pages</h4>
           <ul class="footer-menu">
-            <li><a @click="handleScroll('hero')" class="footer-link">Home</a></li>
-            <li><a @click="handleScroll('features')" class="footer-link">Our Technology</a></li>
-            <li><a @click="handleScroll('why')" class="footer-link">About Us</a></li>
-            <li><a href="#" class="footer-link">Blog</a></li>
-            <li><a @click="handleScroll('footer')" class="footer-link">Contact Us</a></li>
+            <!-- 动态生成导航链接 -->
+            <li v-for="item in props.navList" :key="item.id">
+              <a @click="handleScroll(item.id)" class="footer-link">{{ item.name }}</a>
+            </li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
           <h4 class="footer-title">Get In Touch</h4>
-          <p class="contact-item">Email: contact@rtibid.com</p>
+          <p class="contact-item">Email: support@rtibid.com</p>
           <p class="contact-item">Phone: 613-295-6459</p>
         </div>
       </div>
@@ -44,14 +43,22 @@ import footerlogo0 from '@/assets/dashboard/footerlogo0.png'
 import footerlogo1 from '@/assets/dashboard/footerlogo1.png'
 import footerlogo2 from '@/assets/dashboard/footerlogo2.png'
 
+// 接收父组件传递的导航列表
+const props = defineProps({
+  navList: {
+    type: Array,
+    default: () => []
+  }
+})
+
+import { GlHookuseRouter } from '@/utils/methods'
+const router = GlHookuseRouter()
 
 // 锚点平滑滚动方法
 const handleScroll = (id) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  router.push(id)
 }
+
 </script>
 
 <style lang="less">
@@ -143,10 +150,10 @@ const handleScroll = (id) => {
     }
   }
   
-  .social-item:hover {
-    background: #155DFC;
-    transform: translateY(-3px);
-  }
+  // .social-item:hover {
+  //   background: #155DFC;
+  //   transform: translateY(-3px);
+  // }
   
   .social-icon {
     width: 18px;
