@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import dashboard from '../pages/dashboard/index.vue'
 import Home from '../pages/Home.vue'
 import PrivacyPolicy from '../pages/common/PrivicyPolicy.vue'
 import YarnCase from '../pages/case/yarn.vue'
@@ -10,6 +11,21 @@ import WestwingCase from '../pages/case/westwing.vue'
 const routes = [
   {
     path: '/',
+    name: 'dashboard',
+    component: dashboard
+  },
+  {
+    path: '/test2',
+    name: 'test2',
+    component: () => import('../pages/test2.vue')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('../pages/test.vue')
+  },
+  {
+    path: '/Home',
     name: 'Home',
     component: Home
   },
