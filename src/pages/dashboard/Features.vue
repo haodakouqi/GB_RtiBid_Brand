@@ -66,23 +66,8 @@ const featuresList = ref([
     
     .section-title {
       color: #fff;
-      font-size: 28px;
-      
-      // 响应式标题大小
-      @media (max-width: 768px) {
-        font-size: 24px;
-      }
     }
     
-    .section-desc {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      
-      // 响应式描述大小
-      @media (max-width: 768px) {
-        font-size: 14px;
-      }
-    }
     
     .features-grid {
       display: grid;

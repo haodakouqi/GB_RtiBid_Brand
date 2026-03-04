@@ -80,6 +80,10 @@ const casesList = ref([
     max-width: 1280px;
     margin: 0 auto;
   }
+
+  .section-desc {
+    color: #4A5565;
+  }
   
   .cases-grid {
     display: grid;
@@ -104,94 +108,115 @@ const casesList = ref([
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-  
-  // .case-card:hover {
-  //   transform: translateY(-8px);
-  //   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  // }
-  
-  .case-img_box {
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.40) 50%, rgba(0, 0, 0, 0.00) 100%);
-      z-index: 1;
-    }
-    .case-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-      
-      // 响应式图片高度
-      @media (max-width: 768px) {
-        height: 180px;
+    // .case-card:hover {
+    //   transform: translateY(-8px);
+    //   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    // }
+    
+    .case-img_box {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.40) 50%, rgba(0, 0, 0, 0.00) 100%);
+        z-index: 1;
+      }
+      .case-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        
+        // 响应式图片高度
+        @media (max-width: 768px) {
+          height: 180px;
+        }
       }
     }
-  }
-  
-  .case-card:hover .case-img {
-    transform: scale(1.08);
-  }
-  
-  .case-content {
-    padding: 20px;
+    .case-card:hover .case-img {
+      transform: scale(1.08);
+    }
+    .case-content {
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      
+      // 响应式内容内边距
+      @media (max-width: 768px) {
+        padding: 16px;
+      }
+    }
     
-    // 响应式内容内边距
-    @media (max-width: 768px) {
-      padding: 16px;
+    .case-title {
+
+      margin-bottom: 8px;
+      color: #FFF;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px; /* 133.333% */
+      letter-spacing: 0.07px;
+      
+      // 响应式标题大小
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+    
+    .case-desc {
+      margin-bottom: 16px;
+
+      color: #E5E7EB;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: -0.15px;
+      
+      // 响应式描述大小
+      @media (max-width: 768px) {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+    }
+    
+    .case-link {
+
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.3s ease;
+
+      color: #FFF;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: -0.15px;
+      
+      // 响应式链接大小
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+    
+    .case-link:hover {
+      gap: 8px;
     }
   }
   
-  .case-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 8px;
-    
-    // 响应式标题大小
-    @media (max-width: 768px) {
-      font-size: 16px;
-    }
-  }
   
-  .case-desc {
-    font-size: 14px;
-    color: #6B7280;
-    margin-bottom: 16px;
-    line-height: 1.5;
-    
-    // 响应式描述大小
-    @media (max-width: 768px) {
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-  }
   
-  .case-link {
-    font-size: 13px;
-    font-weight: 600;
-    color: #155DFC;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    transition: gap 0.3s ease;
-    
-    // 响应式链接大小
-    @media (max-width: 768px) {
-      font-size: 12px;
-    }
-  }
-  
-  .case-link:hover {
-    gap: 8px;
-  }
 }
 </style>

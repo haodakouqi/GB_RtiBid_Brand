@@ -18,6 +18,29 @@
           </li>
         </ul>
         <button class="nav-btn" @click="handleScroll('hero')">Get Started</button>
+        <!-- 移动端菜单按钮 -->
+        <button class="menu-toggle" @click="toggleMenu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </button>
+      </div>
+      <!-- 移动端菜单 -->
+      <div class="mobile-menu" v-if="isMenuOpen">
+        <ul class="mobile-nav-menu">
+          <li class="mobile-nav-item">
+            <a @click="handleScroll('features'); toggleMenu()" class="mobile-nav-link">Our Technology</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a @click="handleScroll('why'); toggleMenu()" class="mobile-nav-link">About Us</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#" class="mobile-nav-link">Blog</a>
+          </li>
+          <li class="mobile-nav-item">
+            <button class="mobile-nav-btn" @click="handleScroll('hero'); toggleMenu()">Get Started</button>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -36,7 +59,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import HeroSection from './HeroSection.vue'
 import StatsSection from './StatsSection.vue'
 import Features from './Features.vue'
@@ -48,11 +71,35 @@ import Footer from './Footer.vue'
 
 import logoImg from '@/assets/dashboard/logo.png'
 
-import heroBgImg from '@/assets/dashboard/bg.png'
+// 移动端菜单状态
+const isMenuOpen = ref(false)
 
+// 切换菜单
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
 
-import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
+// 监听窗口宽度变化
+const handleResize = () => {
+  const width = window.innerWidth
+  // isMenuOpen.value = width <= 768
+  if (width > 768) {
+    isMenuOpen.value = false
+  }
+}
 
+// 挂载时添加监听
+onMounted(() => {
+  // 初始化时设置菜单状态
+  handleResize()
+  // 添加窗口大小变化监听
+  window.addEventListener('resize', handleResize)
+})
+
+// 卸载时移除监听
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 
 // 锚点平滑滚动方法
 const handleScroll = (id) => {
@@ -80,6 +127,12 @@ const handleScroll = (id) => {
   top: 0;
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+  // 响应式导航栏高度
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+  
   .nav-container {
     max-width: 1280px;
     margin: 0 auto;
@@ -88,15 +141,31 @@ const handleScroll = (id) => {
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
+    
+    // 响应式内边距
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
+    
     .logo {
       height: 32px;
       object-fit: contain;
+      
+      // 响应式Logo大小
+      @media (max-width: 768px) {
+        height: 28px;
+      }
     }
 
     .nav-menu {
       display: flex;
       list-style: none;
       gap: 32px;
+      
+      // 响应式菜单
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     .nav-link {
@@ -107,6 +176,11 @@ const handleScroll = (id) => {
       font-weight: 500;
       cursor: pointer;
       transition: color 0.3s ease;
+      
+      // 响应式链接
+      @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 14px;
+      }
     }
 
     .nav-link:hover {
@@ -127,6 +201,16 @@ const handleScroll = (id) => {
       border-radius: 64px;
       background: var(--brand, #155DFC);
       box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25) inset;
+      
+      // 响应式按钮
+      @media (max-width: 768px) {
+        display: none;
+      }
+      
+      @media (min-width: 769px) and (max-width: 1024px) {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
     }
 
     .nav-btn:hover {
@@ -134,147 +218,127 @@ const handleScroll = (id) => {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(22, 93, 255, 0.3);
     }
-  }
-}
-
-
-
-/* 英雄区样式 */
-.hero-section {
-  width: 100%;
-  padding: 80px 24px 100px;
-  background-image: url('@/assets/dashboard/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #fff;
-  .hero-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 24px;
-    backdrop-filter: blur(10px);
-    span {
-      margin-left: 8px;
+    
+    // 移动端菜单按钮
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+      
+      @media (max-width: 768px) {
+        display: flex;
+      }
+      
+      .menu-icon {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        transition: all 0.3s ease;
+      }
     }
   }
   
-  .hero-title {
-    width: 600px;
-    margin: 0 auto; 
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  
-  .highlight {
-    color: #FFCC00;
-  }
-  
-  .hero-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 32px;
-  }
-  
-  .hero-btn {
-    padding: 12px 32px;
+  // 移动端菜单
+  .mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
     background: #fff;
-    color: #155DFC;
-    border: none;
-    border-radius: 24px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px 0;
+    animation: slideDown 0.3s ease;
+    
+    .mobile-nav-menu {
+      list-style: none;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .mobile-nav-item {
+      .mobile-nav-link {
+        display: block;
+        padding: 12px 0;
+        text-decoration: none;
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: #155DFC;
+        }
+      }
+      
+      .mobile-nav-btn {
+        width: 100%;
+        padding: 12px;
+        background: #155DFC;
+        color: #fff;
+        border: none;
+        border-radius: 64px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 8px;
+        
+        &:hover {
+          background: #0F48CC;
+        }
+      }
+    }
   }
   
-  .hero-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  .arrow {
-    transition: transform 0.3s ease;
-  }
-
-  .hero-btn:hover .arrow {
-    transform: translateX(3px);
+  // 动画
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
-
 
 /* 通用区块标题样式 */
 .section-title {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
-  color: #111827;
+  color: #101828;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  font-family: Alliance;
 }
 
 .section-desc {
-  font-size: 15px;
-  color: #6B7280;
-  text-align: center;
   margin-bottom: 48px;
-  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+
+  color: #D1D5DC;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.449px;
 }
 
-/* 响应式适配 */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 36px;
-  }
-  .stats-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  .cases-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
 
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  .hero-title {
-    font-size: 28px;
-  }
-  .stats-container {
-    grid-template-columns: 1fr;
-  }
-  .cases-grid {
-    grid-template-columns: 1fr;
-  }
-  .section-title {
-    font-size: 28px;
-  }
-}
+
 </style>

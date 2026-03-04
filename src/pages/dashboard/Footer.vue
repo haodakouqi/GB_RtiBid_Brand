@@ -7,13 +7,13 @@
           <p class="footer-desc">Connect, track, and grow At Rtibid, you only pay for real results.</p>
           <div class="social-group">
             <a href="#" class="social-item">
-              <img :src="footerSocialIcon" alt="social icon" class="social-icon" />
+              <img :src="footerlogo0" alt="social icon" class="social-icon" />
             </a>
             <a href="#" class="social-item">
-              <img :src="footerSocialIcon" alt="social icon" class="social-icon" />
+              <img :src="footerlogo1" alt="social icon" class="social-icon" />
             </a>
             <a href="#" class="social-item">
-              <img :src="footerSocialIcon" alt="social icon" class="social-icon" />
+              <img :src="footerlogo2" alt="social icon" class="social-icon" />
             </a>
           </div>
         </div>
@@ -39,11 +39,19 @@
 import { ref } from 'vue'
 import logoImg from '@/assets/dashboard/logo.png'
 
-import heroBgImg from '@/assets/dashboard/bg.png'
+
+import footerlogo0 from '@/assets/dashboard/footerlogo0.png'
+import footerlogo1 from '@/assets/dashboard/footerlogo1.png'
+import footerlogo2 from '@/assets/dashboard/footerlogo2.png'
 
 
-import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
-
+// 锚点平滑滚动方法
+const handleScroll = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 </script>
 
 <style lang="less">
@@ -55,18 +63,41 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
   width: 100%;
   padding: 60px 24px 40px;
   background: #F9FAFB;
+  
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 40px 16px 30px;
+  }
+  
   .footer-container {
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 48px;
+    
+    // 响应式网格布局
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
   }
   
   .footer-logo {
     height: 32px;
     object-fit: contain;
     margin-bottom: 16px;
+    
+    // 响应式Logo大小
+    @media (max-width: 768px) {
+      height: 28px;
+      margin-bottom: 12px;
+    }
   }
   
   .footer-desc {
@@ -75,11 +106,23 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     line-height: 1.6;
     margin-bottom: 24px;
     max-width: 300px;
+    
+    // 响应式描述
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
   }
   
   .social-group {
     display: flex;
     gap: 16px;
+    
+    // 响应式社交媒体间距
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
   }
   
   .social-item {
@@ -92,6 +135,12 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     justify-content: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+    // 响应式社交媒体图标容器
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
   }
   
   .social-item:hover {
@@ -103,6 +152,12 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     width: 18px;
     height: 18px;
     object-fit: contain;
+    
+    // 响应式社交媒体图标
+    @media (max-width: 768px) {
+      width: 16px;
+      height: 16px;
+    }
   }
   
   .footer-title {
@@ -110,6 +165,12 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     font-weight: 600;
     color: #111827;
     margin-bottom: 16px;
+    
+    // 响应式标题
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
   }
   
   .footer-menu {
@@ -117,6 +178,11 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     display: flex;
     flex-direction: column;
     gap: 12px;
+    
+    // 响应式菜单间距
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
   }
   
   .footer-link {
@@ -125,6 +191,11 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     color: #6B7280;
     cursor: pointer;
     transition: color 0.3s ease;
+    
+    // 响应式链接
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
   }
   
   .footer-link:hover {
@@ -135,6 +206,12 @@ import footerSocialIcon from '@/assets/dashboard/footerlogo2.png'
     font-size: 14px;
     color: #6B7280;
     margin-bottom: 12px;
+    
+    // 响应式联系信息
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
   }
 }
 </style>

@@ -21,6 +21,14 @@
     </section>
 </template>
 <script setup>
+
+// 锚点平滑滚动方法
+const handleScroll = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 </script>
 <style lang="less">
 
@@ -34,8 +42,14 @@
   background-repeat: no-repeat;
   text-align: center;
   color: #fff;
+  
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 60px 16px 80px;
+  }
+  
   .hero-container {
-    max-width: 900px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   
@@ -49,18 +63,41 @@
     font-weight: 500;
     margin-bottom: 24px;
     backdrop-filter: blur(10px);
+    
+    // 响应式徽章
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 4px 12px;
+      margin-bottom: 20px;
+    }
+    
     span {
       margin-left: 8px;
+      
+      @media (max-width: 768px) {
+        margin-left: 6px;
+      }
     }
   }
   
   .hero-title {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto; 
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
+    
+    // 响应式标题
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 40px;
+    }
   }
   
   .highlight {
@@ -72,6 +109,12 @@
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 32px;
+    
+    // 响应式描述
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
   }
   
   .hero-btn {
@@ -87,18 +130,32 @@
     align-items: center;
     gap: 6px;
     transition: all 0.3s ease;
+    
+    // 响应式按钮
+    @media (max-width: 768px) {
+      padding: 10px 24px;
+      font-size: 14px;
+      gap: 4px;
+    }
   }
   
   .hero-btn:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
+  
   .arrow {
     transition: transform 0.3s ease;
   }
 
   .hero-btn:hover .arrow {
     transform: translateX(3px);
+  }
+  
+  // 响应式背景图片
+  @media (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
   }
 }
 
