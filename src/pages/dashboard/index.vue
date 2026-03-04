@@ -58,7 +58,7 @@ const navList = ref([
   },
   {
     name: 'About Us',
-    id: 'technology11'
+    id: 'AboutUs'
   },
   {
     name: 'Blog',

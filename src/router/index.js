@@ -35,6 +35,14 @@ const routes = [
           title: '',
         },
         component: () => import('@/pages/dashboard/Technology/index.vue')
+      },
+      {
+        "path": "/AboutUs",
+        "name": "AboutUs",
+        "meta": {
+          title: '',
+        },
+        component: () => import('@/pages/dashboard/AboutUs/index.vue')
       }
     ]
   },
