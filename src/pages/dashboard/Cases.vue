@@ -1,0 +1,197 @@
+<template>
+  <div class="cases-section" id="cases">
+    <div class="cases-container">
+      <h2 class="section-title">Sharing the Cases</h2>
+      <p class="section-desc">Discover how leading brands achieve remarkable results with RTiBid</p>
+      <div class="cases-grid">
+        <div class="case-card" v-for="(item, index) in casesList" :key="index">
+          <div class="case-img_box">
+            <img :src="item.img" :alt="item.title" class="case-img" />
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">{{ item.title }}</h3>
+            <p class="case-desc">{{ item.desc }}</p>
+            <a href="#" class="case-link">View Case Study <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<!-- 案例区 -->
+<script setup>
+import { ref } from 'vue'
+
+import case0 from '@/assets/dashboard/case0.png'
+import case1 from '@/assets/dashboard/case1.png'
+import case2 from '@/assets/dashboard/case2.png'
+import case3 from '@/assets/dashboard/case3.png'
+import case4 from '@/assets/dashboard/case4.png'
+import case5 from '@/assets/dashboard/case5.png'
+
+// 案例数据
+const casesList = ref([
+  {
+    title: 'LOHILO',
+    desc: 'Fashion retailer increases conversion by 45%',
+    img: case0
+  },
+  {
+    title: 'Herbmed',
+    desc: 'E-commerce growth with AI-powered recommendations',
+    img: case1
+  },
+  {
+    title: 'Zen Pirlanta',
+    desc: 'Health tech scales user acquisition by 200%',
+    img: case2
+  },
+  {
+    title: 'Tikla Gelsin',
+    desc: 'Service app doubles engagement rates',
+    img: case3
+  },
+  {
+    title: 'Holdit',
+    desc: 'Travel brand achieves 3x ROI with targeted campaigns',
+    img: case4
+  },
+  {
+    title: 'Westing',
+    desc: 'Apparel brand optimizes ad spend efficiency',
+    img: case5
+  }
+])
+
+</script>
+<style lang="less" scoped>
+/* 案例区样式 */
+.cases-section {
+  width: 100%;
+  padding: 80px 24px;
+  background: #F9FAFB;
+  
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 60px 16px;
+  }
+  
+  .cases-container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    
+    // 响应式网格布局
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .case-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  // .case-card:hover {
+  //   transform: translateY(-8px);
+  //   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  // }
+  
+  .case-img_box {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.40) 50%, rgba(0, 0, 0, 0.00) 100%);
+      z-index: 1;
+    }
+    .case-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      
+      // 响应式图片高度
+      @media (max-width: 768px) {
+        height: 180px;
+      }
+    }
+  }
+  
+  .case-card:hover .case-img {
+    transform: scale(1.08);
+  }
+  
+  .case-content {
+    padding: 20px;
+    
+    // 响应式内容内边距
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+  
+  .case-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+    
+    // 响应式标题大小
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  .case-desc {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    
+    // 响应式描述大小
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  .case-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #155DFC;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.3s ease;
+    
+    // 响应式链接大小
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  
+  .case-link:hover {
+    gap: 8px;
+  }
+}
+</style>
