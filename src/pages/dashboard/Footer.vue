@@ -62,7 +62,7 @@ const handleScroll = (id) => {
 .footer {
   width: 100%;
   padding: 60px 24px 40px;
-  background: #F9FAFB;
+  background: #fff;
   
   // 响应式内边距
   @media (max-width: 768px) {

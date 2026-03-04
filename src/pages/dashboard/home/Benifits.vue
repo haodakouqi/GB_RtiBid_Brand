@@ -4,8 +4,8 @@
       <h2 class="section-title">Benifits</h2>
       <div class="benefits-grid">
         <div class="benefit-card" v-for="benefit in benefits" :key="benefit.id">
-          <div class="benefit-icon" :style="{ background: benefit.iconBg }">
-            <div class="icon-inner" v-html="benefit.iconSvg"></div>
+          <div class="benefit-icon">
+            <img :src="benefit.iconSvg" alt="icon" class="icon-inner">
           </div>
           <h3 class="benefit-title">{{ benefit.title }}</h3>
           <p class="benefit-desc">{{ benefit.description }}</p>
@@ -16,39 +16,45 @@
 </template>
 
 <script setup>
+
+import BenifitsIcon0 from '@/assets/home/BenifitsIcon0.png'
+import BenifitsIcon1 from '@/assets/home/BenifitsIcon1.png'
+import BenifitsIcon2 from '@/assets/home/BenifitsIcon2.png'
+
 const benefits = [
   {
     id: 1,
-    iconBg: 'linear-gradient(135deg, #168cff 0%, #00d4ff 100%)',
-    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path><path d="M12 2v10"></path><path d="M12 12l8 4"></path></svg>`,
+    iconSvg: BenifitsIcon0,
     title: 'Beyond keywords',
     description: 'Engagement-driven performance. Build contextual targeting at a global scale.'
   },
   {
     id: 2,
-    iconBg: 'linear-gradient(135deg, #b224ef 0%, #ff5caa 100%)',
-    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
+    iconSvg: BenifitsIcon1,
     title: 'Privacy-first technology',
     description: 'Contextual intelligence, not user tracking. Serving products that truly resonate.'
   },
   {
     id: 3,
-    iconBg: 'linear-gradient(135deg, #ff5e3a 0%, #ff2a68 100%)',
-    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>`,
+    iconSvg: BenifitsIcon2,
     title: 'Unrivaled precision',
     description: 'Turning real-time signals into action with AI.'
   }
 ];
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .benefits-section {
-  padding: 60px 20px;
+  padding: 60px 24px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 60px 16px;
+  }
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -96,8 +102,8 @@ const benefits = [
 }
 
 .icon-inner {
-  width: 24px;
-  height: 24px;
+  width: 64px;
+  height: 64px;
 }
 
 .benefit-title {

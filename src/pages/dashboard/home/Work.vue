@@ -1,5 +1,5 @@
 <template>
-  <section class="how-it-works-section">
+  <section class="Work">
     <div class="container">
       <h2 class="section-title">How does this work?</h2>
       <div class="cards-grid">
@@ -18,49 +18,55 @@
 </template>
 
 <script setup>
+import work0 from '@/assets/home/work0.png'
+import work1 from '@/assets/home/work1.png'
+import work2 from '@/assets/home/work2.png'
+
 const features = [
   {
     id: 1,
-    image: 'https://picsum.photos/id/237/600/300', // 替换为你的语义智能图片
+    image: work0, // 替换为你的语义智能图片
     title: 'Semantic intelligence',
     description: 'Leverages deep semantic understanding to go beyond keyword matching and broad category targeting.'
   },
   {
     id: 2,
-    image: 'https://picsum.photos/id/111/600/300', // 替换为你的精准对齐图片
+    image: work1, // 替换为你的精准对齐图片
     title: 'Precision alignment',
     description: 'Enables product-to-URL alignment, ensuring ads appear on the most relevant pages.'
   },
   {
     id: 3,
-    image: 'https://picsum.photos/id/180/600/300', // 替换为你的URL级粒度图片
+    image: work2, // 替换为你的URL级粒度图片
     title: 'URL-level granularity',
     description: 'Delivers granular targeting at the individual URL level — not just entire domains or sections.'
   }
 ];
 </script>
 
-<style scoped>
-.how-it-works-section {
-  padding: 60px 20px;
+<style lang="less" scoped>
+.Work {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: linear-gradient(135deg, #0f2046 0%, #1a3b7a 100%);
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 4rem 24px;
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 4rem 16px;
+  }
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 700;
   color: #ffffff;
   margin-bottom: 40px;
+  line-height: 56px;
   text-align: left;
 }
 
@@ -107,16 +113,26 @@ const features = [
 }
 
 .card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff;
   margin-bottom: 12px;
+
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.07px;
 }
 
 .card-description {
-  font-size: 0.9375rem;
-  color: #d1d5db;
-  line-height: 1.6;
   margin: 0;
+
+  color: #D1D5DC;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.312px;
 }
 </style>

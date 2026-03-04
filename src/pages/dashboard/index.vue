@@ -43,6 +43,10 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 import logoImg from '@/assets/dashboard/logo.png'
 import Footer from './Footer.vue'
+
+import { GlHookuseRouter } from '@/utils/methods'
+const router = GlHookuseRouter()
+
 const navList = ref([
   {
     name: 'home',
@@ -50,15 +54,15 @@ const navList = ref([
   },
   {
     name: 'Our Technology',
-    id: 'features'
+    id: 'technology'
   },
   {
     name: 'About Us',
-    id: 'why'
+    id: 'technology11'
   },
   {
     name: 'Blog',
-    id: 'blog'
+    id: 'technology22'
   }
 ])
 
@@ -94,10 +98,7 @@ onUnmounted(() => {
 
 // 锚点平滑滚动方法
 const handleScroll = (id) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  router.push(id)
 }
 
 </script>

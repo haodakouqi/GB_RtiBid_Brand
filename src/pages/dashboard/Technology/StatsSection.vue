@@ -68,10 +68,24 @@ const handleMouseLeave = () => {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 40px 0;
+  // padding: 40px 0;
+  padding: 80px 24px;
   gap: 60px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  
+
+  /* 响应式 */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px; /* 移动端垂直间距加大 */
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+
+  
   .stat-item {
     text-align: center;
     cursor: pointer;
@@ -129,15 +143,4 @@ const handleMouseLeave = () => {
 }
 
 
-/* 响应式 */
-@media (max-width: 768px) {
-  .stats-container {
-    flex-direction: column;
-    gap: 40px; /* 移动端垂直间距加大 */
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-}
 </style>

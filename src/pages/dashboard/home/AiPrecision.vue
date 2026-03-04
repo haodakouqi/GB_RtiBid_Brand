@@ -55,14 +55,18 @@ const features = [
 ];
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .ai-section {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.24px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 4rem 16px;
+  }
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -122,8 +126,8 @@ const features = [
 }
 
 .feature-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 36px;
+  height: 36px;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -142,22 +146,22 @@ const features = [
 
 /* 闪电图标 */
 .icon-lightning {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m13 2-3 7h8l-4 9 3-7h-8l4-9z'/%3E%3C/svg%3E");
+  background-image: url("@/assets/home/AiPrecisionIcon0.png");
 }
 
 /* 调色板图标 */
 .icon-palette {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 20V10M12 20V4M6 20v-6M2 20h20'/%3E%3C/svg%3E");
+  background-image: url("@/assets/home/AiPrecisionIcon1.png");
 }
 
 /* 用户验证图标 */
 .icon-user-check {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='m16 16 2 2 4-4'/%3E%3C/svg%3E");
+  background-image: url("@/assets/home/AiPrecisionIcon2.png");
 }
 
 /* 柱状图图标 */
 .icon-bar-chart {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12V2H3v10'/%3E%3Cpath d='M6 22v-4'/%3E%3Cpath d='M10 22v-8'/%3E%3Cpath d='M14 22v-6'/%3E%3Cpath d='M18 22v-9'/%3E%3C/svg%3E");
+  background-image: url("@/assets/home/AiPrecisionIcon3.png");
 }
 
 .feature-title {

@@ -30,18 +30,21 @@
 const brands = ['LOHILO', 'Herbmed', 'Holdit', 'Westing'];
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .hero-section {
-  padding: 60px 20px;
+  padding: 75px 24px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: linear-gradient(135deg, #f0f4ff 0%, #f8f0ff 100%);
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  // 响应式内边距
+  @media (max-width: 768px) {
+    padding: 75px 16px;
+  }
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
