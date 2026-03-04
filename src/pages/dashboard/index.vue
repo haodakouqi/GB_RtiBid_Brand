@@ -1,5 +1,5 @@
 <template>
-  <div class="rtibid-landing">
+  <div class="dashboard_main">
     <!-- 导航栏 -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
@@ -7,14 +7,8 @@
           <img :src="logoImg" alt="RTiBid Logo" class="logo" />
         </div>
         <ul class="nav-menu">
-          <li class="nav-item">
-            <a @click="handleScroll('features')" class="nav-link">Our Technology</a>
-          </li>
-          <li class="nav-item">
-            <a @click="handleScroll('why')" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Blog</a>
+          <li class="nav-item" v-for="item in navList" :key="item.id">
+            <a @click="handleScroll(item.id)" class="nav-link">{{ item.name }}</a>
           </li>
         </ul>
         <button class="nav-btn" @click="handleScroll('hero')">Get Started</button>
@@ -28,14 +22,8 @@
       <!-- 移动端菜单 -->
       <div class="mobile-menu" v-if="isMenuOpen">
         <ul class="mobile-nav-menu">
-          <li class="mobile-nav-item">
-            <a @click="handleScroll('features'); toggleMenu()" class="mobile-nav-link">Our Technology</a>
-          </li>
-          <li class="mobile-nav-item">
-            <a @click="handleScroll('why'); toggleMenu()" class="mobile-nav-link">About Us</a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="#" class="mobile-nav-link">Blog</a>
+          <li class="mobile-nav-item" v-for="item in navList" :key="item.id">
+            <a @click="handleScroll(item.id); toggleMenu()" class="mobile-nav-link">{{ item.name }}</a>
           </li>
           <li class="mobile-nav-item">
             <button class="mobile-nav-btn" @click="handleScroll('hero'); toggleMenu()">Get Started</button>
@@ -43,33 +31,36 @@
         </ul>
       </div>
     </nav>
-
-    
-
-    <HeroSection></HeroSection>
-    <!-- 统计区 -->
-    <StatsSection></StatsSection>
-    
-    <!-- 功能区 features -->
-    <Features></Features>
-    <Cases></Cases>
-    <WhySection></WhySection>
+    <router-view v-slot="{ Component, route }">
+      <component :is="Component" :key="route.fullPath" />
+    </router-view>
     <Footer></Footer>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import HeroSection from './HeroSection.vue'
-import StatsSection from './StatsSection.vue'
-import Features from './Features.vue'
-import Cases from './Cases.vue'
-import WhySection from './WhySection.vue'
-import Footer from './Footer.vue'
-
-
 
 import logoImg from '@/assets/dashboard/logo.png'
+import Footer from './Footer.vue'
+const navList = ref([
+  {
+    name: 'home',
+    id: 'home'
+  },
+  {
+    name: 'Our Technology',
+    id: 'features'
+  },
+  {
+    name: 'About Us',
+    id: 'why'
+  },
+  {
+    name: 'Blog',
+    id: 'blog'
+  }
+])
 
 // 移动端菜单状态
 const isMenuOpen = ref(false)
@@ -113,7 +104,7 @@ const handleScroll = (id) => {
 
 <style lang="less">
 
-.rtibid-landing {
+.dashboard_main {
   width: 100%;
   overflow-x: hidden;
 }
@@ -123,8 +114,10 @@ const handleScroll = (id) => {
   width: 100%;
   height: 67px;
   background: #fff;
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
+  // // left: 0;
+  // // right: 0;
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   
@@ -338,7 +331,5 @@ const handleScroll = (id) => {
   line-height: 28px; /* 140% */
   letter-spacing: -0.449px;
 }
-
-
 
 </style>

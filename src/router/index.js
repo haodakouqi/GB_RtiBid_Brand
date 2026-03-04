@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import dashboard from '../pages/dashboard/index.vue'
+
 import Home from '../pages/Home.vue'
 import PrivacyPolicy from '../pages/common/PrivicyPolicy.vue'
 import YarnCase from '../pages/case/yarn.vue'
@@ -8,16 +9,34 @@ import herbmedCase from '../pages/case/herbmed.vue'
 import VuxenCase from '../pages/case/vuxen.vue'
 import LeroyMerlinCase from '../pages/case/leroyMerlin.vue'
 import WestwingCase from '../pages/case/westwing.vue'
+
 const routes = [
+  {
+    path: "/",
+    redirect: "/home"
+  },
   {
     path: '/',
     name: 'dashboard',
-    component: dashboard
-  },
-  {
-    path: '/test2',
-    name: 'test2',
-    component: () => import('../pages/test2.vue')
+    component: dashboard,
+    children: [
+      {
+        "path": "/home",
+        "name": "home",
+        "meta": {
+          title: '',
+        },
+        component: () => import('@/pages/dashboard/home/index.vue')
+      },
+      {
+        "path": "/technology",
+        "name": "technology",
+        "meta": {
+          title: '',
+        },
+        component: () => import('@/pages/dashboard/Technology/index.vue')
+      }
+    ]
   },
   {
     path: '/test',
