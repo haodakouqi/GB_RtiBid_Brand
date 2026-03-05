@@ -8,7 +8,7 @@
         </div>
         <ul class="nav-menu">
           <li class="nav-item" v-for="item in navList" :key="item.id">
-            <a @click="handleScroll(item.id)" class="nav-link">{{ item.name }}</a>
+            <a @click="handleScroll(item.id)" class="nav-link" :class="{'active': routeName === item.id}">{{ item.name }}</a>
           </li>
         </ul>
         <button class="nav-btn" @click="handleScroll('GetStarted')">Get Started</button>
@@ -23,7 +23,7 @@
       <div class="mobile-menu" v-if="isMenuOpen">
         <ul class="mobile-nav-menu">
           <li class="mobile-nav-item" v-for="item in navList" :key="item.id">
-            <a @click="handleScroll(item.id); toggleMenu()" class="mobile-nav-link">{{ item.name }}</a>
+            <a @click="handleScroll(item.id); toggleMenu()" class="mobile-nav-link" :class="{'active': routeName === item.id}">{{ item.name }}</a>
           </li>
           <li class="mobile-nav-item">
             <button class="mobile-nav-btn" @click="handleScroll('GetStarted'); toggleMenu()">Get Started</button>
@@ -39,21 +39,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 import Footer from './Footer.vue'
 
-import { GlHookuseRouter } from '@/utils/methods'
+import { GlHookuseRouter, GlHookvueUseRoute } from '@/utils/methods'
+// import { useRouter as vueUseRouter, useRoute as vueUseRoute } from 'vue-router'
 const router = GlHookuseRouter()
+
 
 // 锚点平滑滚动方法
 const handleScroll = (id) => {
   router.push(id)
 }
 
+const routeName = computed(() => {
+  const route = GlHookvueUseRoute();
+  return route.name;
+})
+
 const navList = ref([
   {
-    name: 'home',
+    name: 'Home',
     id: 'home'
   },
   {
@@ -164,9 +171,9 @@ onUnmounted(() => {
 
     .nav-link {
       text-decoration: none;
-      color: #333;
+      color: #101828;
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.4;
       font-weight: 500;
       cursor: pointer;
       transition: color 0.3s ease;
@@ -175,11 +182,16 @@ onUnmounted(() => {
       @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 14px;
       }
+
+      &.active {
+        color: #155DFC;
+        font-weight: 700;
+      }
     }
 
-    .nav-link:hover {
-      color: #155DFC;
-    }
+    // .nav-link:hover {
+    //   color: #155DFC;
+    // }
 
     .nav-btn {
       padding: 12px 20px;
@@ -261,6 +273,7 @@ onUnmounted(() => {
     }
     
     .mobile-nav-item {
+      cursor: pointer;
       .mobile-nav-link {
         display: block;
         padding: 12px 0;
@@ -269,9 +282,10 @@ onUnmounted(() => {
         font-size: 15px;
         font-weight: 500;
         transition: color 0.3s ease;
-        
-        &:hover {
+
+        &.active {
           color: #155DFC;
+          font-weight: 700;
         }
       }
       

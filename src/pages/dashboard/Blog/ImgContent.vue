@@ -5,7 +5,7 @@
         <!-- 卡片1 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/870/800/450" alt="AI-Driven DSPs" />
+            <img src="@/assets/Blog/BlogImage0.png" alt="AI-Driven DSPs" />
           </div>
           <div class="card-content">
             <h3 class="card-title">Why AI-Driven DSPs Are the Future of Ecommerce Advertising</h3>
@@ -19,12 +19,12 @@
         <!-- 卡片2 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/180/800/450" alt="Predictive Bidding" />
+            <img src="@/assets/Blog/BlogImage1.png" alt="Predictive Bidding" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Rtibid's Predictive Bidding: How AI Helps Maximize Ecommerce ROI</h3>
+            <h3 class="card-title">RtiBid's Predictive Bidding: How AI Helps Maximize Ecommerce ROI</h3>
             <p class="card-desc">
-              The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. Rtibid's predictive bidding technology solves t...
+              The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid's predictive bidding technology solves t...
             </p>
             <a href="#" class="read-more">Read More →</a>
           </div>
@@ -33,12 +33,12 @@
         <!-- 卡片3 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/425/800/450" alt="Dynamic Product Recommendations" />
+            <img src="@/assets/Blog/BlogImage2.png" alt="Dynamic Product Recommendations" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Rtibid's AI-Powered Dynamic Product Recommendations</h3>
+            <h3 class="card-title">RtiBid's AI-Powered Dynamic Product Recommendations</h3>
             <p class="card-desc">
-              One of the key drivers of ecommerce success is personalized recommendations. Rtibid's AI-powered product recommendations engine d...
+              One of the key drivers of ecommerce success is personalized recommendations. RtiBid's AI-powered product recommendations engine d...
             </p>
             <a href="#" class="read-more">Read More →</a>
           </div>
@@ -47,10 +47,10 @@
         <!-- 卡片4 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/412/800/450" alt="Contextual Advertising" />
+            <img src="@/assets/Blog/BlogImage3.png" alt="Contextual Advertising" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">The Future of Contextual Advertising: Rtibid's AI-Powered Approach</h3>
+            <h3 class="card-title">The Future of Contextual Advertising: RtiBid's AI-Powered Approach</h3>
             <p class="card-desc">
               As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional b...
             </p>
@@ -61,12 +61,12 @@
         <!-- 卡片5 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/433/800/450" alt="Full-Funnel Advertising" />
+            <img src="@/assets/Blog/BlogImage4.png" alt="Full-Funnel Advertising" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Rtibid's Full-Funnel Advertising Solution for Ecommerce</h3>
+            <h3 class="card-title">RtiBid's Full-Funnel Advertising Solution for Ecommerce</h3>
             <p class="card-desc">
-              Ecommerce brands need to engage customers across every stage of the buyer journey. Rtibid provides a full-funnel advertising solution that...
+              Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that...
             </p>
             <a href="#" class="read-more">Read More →</a>
           </div>
@@ -75,12 +75,12 @@
         <!-- 卡片6 -->
         <div class="blog-card">
           <div class="card-image">
-            <img src="https://picsum.photos/id/48/800/450" alt="Performance Marketing" />
+            <img src="@/assets/Blog/BlogImage5.png" alt="Performance Marketing" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Rtibid's AI-Powered Performance Marketing: A Game Changer for ...</h3>
+            <h3 class="card-title">RtiBid's AI-Powered Performance Marketing: A Game Changer for ...</h3>
             <p class="card-desc">
-              As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. Rtibid's A...
+              As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. RtiBid's A...
             </p>
             <a href="#" class="read-more">Read More →</a>
           </div>
@@ -97,7 +97,7 @@
 <style lang="less" scoped>
 .blog-container {
   width: 100%;
-  padding: 24px 0;
+  padding: 50px 0 69px;
 
   .blog-wrapper {
     max-width: 1280px;
@@ -107,7 +107,7 @@
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 32px;
 
       .blog-card {
         background: #fff;
@@ -141,30 +141,31 @@
           padding: 20px;
 
           .card-title {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.4;
-            color: #111;
             margin: 0 0 12px;
+            color: #101828;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px; /* 140% */
+            letter-spacing: -0.449px;
           }
 
           .card-desc {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.6;
-            color: #555;
+            color: #4A5565;
             margin: 0 0 16px;
           }
 
           .read-more {
-            font-size: 14px;
-            font-weight: 500;
-            color: #0066cc;
-            text-decoration: none;
-            transition: color 0.2s ease;
-
-            &:hover {
-              color: #004c99;
-            }
+            color: var(--brand, #155DFC);
+            font-family: Inter;
+            font-size: 16px;
+            line-height: 26px; /* 162.5% */
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: -0.312px;
           }
         }
       }

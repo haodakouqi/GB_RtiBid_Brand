@@ -4,7 +4,7 @@
       <h2 class="about-section__title">Who We Are</h2>
       <div class="about-section__content">
         <p class="about-section__paragraph">
-          Rtibid is an <strong>AI-powered</strong> performance DSP built for high-growth e-commerce brands. We combine advanced machine learning, deep user understanding, and global media reach to help advertisers achieve measurable revenue growth — efficiently, transparently, and at scale.
+          RtiBid is an <strong>AI-powered</strong> performance DSP built for high-growth e-commerce brands. We combine advanced machine learning, deep user understanding, and global media reach to help advertisers achieve measurable revenue growth — efficiently, transparently, and at scale.
         </p>
         <p class="about-section__paragraph">
           Our team <strong>brings years of experience</strong> working with top e-commerce players across the US, Europe, and APAC, delivering consistent ROAS lift and incremental sales through intelligent retargeting.

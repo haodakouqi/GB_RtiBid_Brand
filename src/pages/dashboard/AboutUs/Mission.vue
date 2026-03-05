@@ -18,7 +18,7 @@
             We believe performance advertising should be predictable, transparent, and growth-oriented.
           </p>
           <p class="mission-section__paragraph">
-            Rtibid exists to make that possible.
+            RtiBid exists to make that possible.
           </p>
         </div>
       </div>

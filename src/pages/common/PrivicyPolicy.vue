@@ -1,7 +1,6 @@
 <template>
   <div class="privacy-policy-page">
 
-    <Header></Header>
 
     <section class="hero-section">
       <div class="bg"></div>
@@ -146,11 +145,11 @@
                       <li>Opt-out of the "sale" or "sharing" of your personal information.</li>
                       <li>Data portability.</li>
                     </ul>
-                    To exercise these rights, please submit a verifiable request to us at privacy@shoperatech.com or through our webform at shoperatech.com.
+                    To exercise these rights, please submit a verifiable request to us at privacy@.com or through our webform at .com.
                   </li>
                   <li><strong>GDPR Rights (EEA/UK):</strong> If our processing of your personal data is subject to GDPR, you
                     have the right to access, rectify, erase, restrict processing, object to processing, and data portability.
-                    Please contact us at privacy@shoperatech.com.
+                    Please contact us at privacy@.com.
                   </li>
                 </ul>
 
@@ -181,8 +180,8 @@
                 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                 <p>Shopera Inc.<br>
                   <!--          [Your Physical Address]<br>-->
-                  privacy@shoperatech.com<br>
-                  shoperatech.com</p>
+                  privacy@.com<br>
+                  .com</p>
               </article>
             </section>
 
@@ -191,15 +190,11 @@
         </div>
       </div>
     </div>
-    
-    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import Header from '../../components/Header.vue'
-import Footer from '../../components/Footer.vue'
 
 const activeTab = ref('services')
 const activeSection = ref('our-services')

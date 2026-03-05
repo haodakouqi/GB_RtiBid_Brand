@@ -1,4 +1,4 @@
-# shopera-website
+# GB_RtiBid_Brand-website
 
 
 根据设计图，开发vue代码，包含dom和样式，

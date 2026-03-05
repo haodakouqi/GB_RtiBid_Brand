@@ -2,7 +2,7 @@
   <div class="blog-hero">
     <div class="blog-hero__container">
       <div class="blog-hero__content">
-        <h1 class="blog-hero__title">The Rtibid Blog</h1>
+        <h1 class="blog-hero__title">The RtiBid Blog</h1>
         <p class="blog-hero__subtitle">
           Find inspiration and expert advice on how to get the most out of your digital advertising
         </p>

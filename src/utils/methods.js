@@ -1,4 +1,4 @@
-import { useRouter as vueUseRouter } from 'vue-router'
+import { useRouter as vueUseRouter, useRoute as vueUseRoute } from 'vue-router'
 
 /**
  * 封装的路由hook，提供路由相关的方法
@@ -9,7 +9,7 @@ export function GlHookuseRouter() {
 
   /**
    * 跳转到指定路径
-   * @param {string} path - 目标路径
+   * @param {string} name - 目标路由名称
    * @param {Object} query - 查询参数
    */
   const push = (name, query = {}) => {
@@ -54,5 +54,24 @@ export function GlHookuseRouter() {
     back,
     forward,
     go
+  }
+}
+
+/**
+ * 封装的路由信息hook，返回当前页面的路由信息
+ * @returns {Object} 当前路由信息
+ */
+export function GlHookvueUseRoute() {
+  const route = vueUseRoute()
+
+  // 返回当前路由的关键信息
+  return {
+    route,
+    path: route.path,
+    name: route.name,
+    query: route.query,
+    params: route.params,
+    fullPath: route.fullPath,
+    hash: route.hash
   }
 }

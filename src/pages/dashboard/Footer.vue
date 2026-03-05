@@ -4,7 +4,7 @@
       <div class="footer-container">
         <div class="footer-col footer-brand">
           <SvgIcon iconClass="loginLogo" width="88" height="40"/>
-          <p class="footer-desc">Connect, track, and grow At Rtibid, you only pay for real results.</p>
+          <p class="footer-desc">Connect, track, and grow At RtiBid, you only pay for real results.</p>
           <div class="social-group">
             <a href="javascript:void(0);" class="social-item">
               <img :src="footerlogo0" alt="social icon" class="social-icon" />
