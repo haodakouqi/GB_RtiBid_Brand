@@ -11,7 +11,7 @@
             <a @click="handleScroll(item.id)" class="nav-link">{{ item.name }}</a>
           </li>
         </ul>
-        <button class="nav-btn" @click="handleScroll('hero')">Get Started</button>
+        <button class="nav-btn" @click="handleScroll('GetStarted')">Get Started</button>
         <!-- 移动端菜单按钮 -->
         <button class="menu-toggle" @click="toggleMenu">
           <span class="menu-icon"></span>
@@ -26,7 +26,7 @@
             <a @click="handleScroll(item.id); toggleMenu()" class="mobile-nav-link">{{ item.name }}</a>
           </li>
           <li class="mobile-nav-item">
-            <button class="mobile-nav-btn" @click="handleScroll('hero'); toggleMenu()">Get Started</button>
+            <button class="mobile-nav-btn" @click="handleScroll('GetStarted'); toggleMenu()">Get Started</button>
           </li>
         </ul>
       </div>

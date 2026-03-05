@@ -14,7 +14,7 @@
             ROI-driven bidding, dynamic personalization, and premium global media access.
             <br />Transform your advertising with intelligent automation.
         </p>
-        <button class="hero-btn" @click="handleScroll('features')">
+        <button class="hero-btn" @click="handleScroll('GetStarted')">
             Get Started <span class="arrow">→</span>
         </button>
         </div>
@@ -22,13 +22,14 @@
 </template>
 <script setup>
 
+import { GlHookuseRouter } from '@/utils/methods'
+const router = GlHookuseRouter()
+
 // 锚点平滑滚动方法
 const handleScroll = (id) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  router.push(id)
 }
+
 </script>
 <style lang="less">
 
