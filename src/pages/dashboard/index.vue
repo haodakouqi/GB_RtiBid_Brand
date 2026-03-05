@@ -4,7 +4,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <div class="nav-logo">
-          <img :src="logoImg" alt="RTiBid Logo" class="logo" />
+           <SvgIcon iconClass="loginLogo" width="88" height="40"/>
         </div>
         <ul class="nav-menu">
           <li class="nav-item" v-for="item in navList" :key="item.id">
@@ -41,7 +41,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-import logoImg from '@/assets/dashboard/logo.png'
 import Footer from './Footer.vue'
 
 import { GlHookuseRouter } from '@/utils/methods'

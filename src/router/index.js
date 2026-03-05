@@ -55,11 +55,11 @@ const routes = [
       
     ]
   },
-  {
-    path: '/test',
-    name: 'test',
-    component: () => import('../pages/test.vue')
-  },
+  // {
+  //   path: '/test',
+  //   name: 'test',
+  //   component: () => import('../pages/test.vue')
+  // },
   // {
   //   path: '/Home',
   //   name: 'Home',

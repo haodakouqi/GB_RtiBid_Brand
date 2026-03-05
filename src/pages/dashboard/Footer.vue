@@ -3,7 +3,7 @@
     <footer class="footer" id="footer">
       <div class="footer-container">
         <div class="footer-col footer-brand">
-          <img :src="logoImg" alt="RTiBid Logo" class="footer-logo" />
+          <SvgIcon iconClass="loginLogo" width="88" height="40"/>
           <p class="footer-desc">Connect, track, and grow At Rtibid, you only pay for real results.</p>
           <div class="social-group">
             <a href="javascript:void(0);" class="social-item">
@@ -36,9 +36,6 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import logoImg from '@/assets/dashboard/logo.png'
-
-
 import footerlogo0 from '@/assets/dashboard/footerlogo0.png'
 import footerlogo1 from '@/assets/dashboard/footerlogo1.png'
 import footerlogo2 from '@/assets/dashboard/footerlogo2.png'
