@@ -176,7 +176,7 @@ const features = [
 
 .feature-title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #1D2939;
   margin-bottom: 0.75rem;
 }

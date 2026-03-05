@@ -71,10 +71,10 @@
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
 @max-content-width: 1280px;
-@title-color: #0f172a;
-@text-color: #334155;
-@sub-text-color: #475569;
-@border-color: #e2e8f0;
+@title-color: #101828;
+@text-color: #4A5565;
+@sub-text-color: #4A5565;
+@border-color: #E5E5E5;
 @card-radius: 12px;
 
 .values-section {
@@ -153,7 +153,12 @@
     font-weight: 600;
     color: @title-color;
     margin: 0 0 8px 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.07px;
   }
 
   &__text {
