@@ -6,7 +6,7 @@
       class="success-message"
       :class="{ 'show': showSuccess }"
     >
-      提交成功！我们会尽快与您联系。
+      Submission successful! We will contact you as soon as possible.
     </div>
 
     <div class="container">
@@ -258,9 +258,9 @@ const handleSubmit = () => {
     }, 3000)
 
     // 重置表单
-    Object.keys(form).forEach(key => {
-      form[key] = ''
-    })
+    // Object.keys(form).forEach(key => {
+    //   form[key] = ''
+    // })
   }
 }
 </script>
@@ -403,24 +403,52 @@ const handleSubmit = () => {
     }
   }
 
-  // 成功消息样式
+  // 成功消息样式（Element Plus Message风格）
   .success-message {
     position: fixed;
-    top: -80px;
-    left: 0;
-    right: 0;
-    padding: 16px 24px;
-    background-color: #10B981;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease;
-    z-index: 1000;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    padding: 12px 20px;
+    background-color: #f0f9eb;
+    color: #67c23a;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 300px;
+    max-width: 700px;
+    // border-left: 4px solid #67c23a;
+
+    // &::before {
+    //   content: '✓';
+    //   font-size: 16px;
+    //   font-weight: bold;
+    // }
 
     &.show {
-      top: 0;
+      animation: slideDown 0.5s ease-out forwards;
+    }
+  }
+
+  // 从上面下来的动画
+  @keyframes slideDown {
+    0% {
+      transform: translateX(-50%) translateY(-100px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateX(-50%) translateY(5px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
     }
   }
 }

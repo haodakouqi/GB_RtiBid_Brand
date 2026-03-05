@@ -3,7 +3,7 @@
     <!-- 导航栏 -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <div class="nav-logo">
+        <div class="nav-logo" @click="handleScroll('home')">
            <SvgIcon iconClass="loginLogo" width="88" height="40"/>
         </div>
         <ul class="nav-menu">
@@ -148,14 +148,8 @@ onUnmounted(() => {
       padding: 0 16px;
     }
     
-    .logo {
-      height: 32px;
-      object-fit: contain;
-      
-      // 响应式Logo大小
-      @media (max-width: 768px) {
-        height: 28px;
-      }
+    .nav-logo {
+      cursor: pointer;
     }
 
     .nav-menu {
