@@ -15,7 +15,7 @@
         />
         <div class="quote-card__info">
           <div class="quote-card__name">Jeff</div>
-          <div class="quote-card__title">Chief Technology Officer Of RTiBid</div>
+          <div class="quote-card__title">Chief Technology Officer Of RtiBid</div>
         </div>
       </div>
     </div>

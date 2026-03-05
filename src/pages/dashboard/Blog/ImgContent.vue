@@ -41,42 +41,42 @@ const handleScroll = (name) => {
 
 const blogs = [
   {
-    id: 1,
+    id: 'article1',
     image: BlogImage0,
     alt: 'AI-Driven DSPs',
     title: 'Why AI-Driven DSPs Are the Future of Ecommerce Advertising',
     description: 'The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to...'
   },
   {
-    id: 2,
+    id: 'article2',
     image: BlogImage1,
     alt: 'Predictive Bidding',
     title: 'RtiBid\'s Predictive Bidding: How AI Helps Maximize Ecommerce ROI',
     description: 'The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid\'s predictive bidding technology solves t...'
   },
   {
-    id: 3,
+    id: 'article3',
     image: BlogImage2,
     alt: 'Dynamic Product Recommendations',
     title: 'RtiBid\'s AI-Powered Dynamic Product Recommendations',
     description: 'One of the key drivers of ecommerce success is personalized recommendations. RtiBid\'s AI-powered product recommendations engine d...'
   },
   {
-    id: 4,
+    id: 'article4',
     image: BlogImage3,
     alt: 'Contextual Advertising',
     title: 'The Future of Contextual Advertising: RtiBid\'s AI-Powered Approach',
     description: 'As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional b...'
   },
   {
-    id: 5,
+    id: 'article5',
     image: BlogImage4,
     alt: 'Full-Funnel Advertising',
     title: 'RtiBid\'s Full-Funnel Advertising Solution for Ecommerce',
     description: 'Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that...'
   },
   {
-    id: 6,
+    id: 'article6',
     image: BlogImage5,
     alt: 'Performance Marketing',
     title: 'RtiBid\'s AI-Powered Performance Marketing: A Game Changer for ...',

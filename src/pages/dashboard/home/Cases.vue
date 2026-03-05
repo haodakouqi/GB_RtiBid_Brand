@@ -2,7 +2,7 @@
   <div class="cases-section" id="cases">
     <div class="cases-container">
       <h2 class="section-title">Sharing the Cases</h2>
-      <p class="section-desc">Discover how leading brands achieve remarkable results with RTiBid</p>
+      <p class="section-desc">Discover how leading brands achieve remarkable results with RtiBid</p>
       <div class="cases-grid">
         <div class="case-card" v-for="(item, index) in casesList" :key="index">
           <div class="case-img_box">
@@ -11,7 +11,7 @@
           <div class="case-content">
             <h3 class="case-title">{{ item.title }}</h3>
             <p class="case-desc">{{ item.desc }}</p>
-            <a href="javascript:void(0)" @click="handleScroll(item.title)" class="case-link">View Case Study <span>↗</span></a>
+            <a href="javascript:void(0)" @click="handleScroll(item.id)" class="case-link">View Case Study <span>↗</span></a>
           </div>
         </div>
       </div>
@@ -44,31 +44,37 @@ const handleScroll = (name) => {
 // 案例数据
 const casesList = ref([
   {
+    id: 'Cases1',
     title: 'LOHILO',
     desc: 'Fashion retailer increases conversion by 45%',
     img: case0
   },
   {
+    id: 'Cases2',
     title: 'Herbmed',
     desc: 'E-commerce growth with AI-powered recommendations',
     img: case1
   },
   {
+    id: 'Cases3',
     title: 'Zen Pirlanta',
     desc: 'Health tech scales user acquisition by 200%',
     img: case2
   },
   {
+    id: 'Cases4',
     title: 'Tikla Gelsin',
     desc: 'Service app doubles engagement rates',
     img: case3
   },
   {
+    id: 'Cases5',
     title: 'Holdit',
     desc: 'Travel brand achieves 3x ROI with targeted campaigns',
     img: case4
   },
   {
+    id: 'Cases6',
     title: 'Westing',
     desc: 'Apparel brand optimizes ad spend efficiency',
     img: case5
@@ -140,13 +146,13 @@ const casesList = ref([
       }
       .case-img {
         width: 100%;
-        height: 220px;
+        height: 400px;
         object-fit: cover;
         transition: transform 0.5s ease;
         
         // 响应式图片高度
         @media (max-width: 768px) {
-          height: 180px;
+          height: 330px;
         }
       }
     }

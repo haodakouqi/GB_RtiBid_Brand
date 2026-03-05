@@ -1,9 +1,11 @@
 <template>
   <div class="features-section" id="features">
     <div class="features-container">
-      <h2 class="section-title">Features</h2>
+      <h2 class="section-title">Powerful Features for Every Role</h2>
       <p class="section-desc">
-        Control, scale, and maximize monetization with real-time performance insights.
+        From advertisers to agencies, our platform delivers measurable results 
+        <br />
+        across the entire ecosystem.
       </p>
       <div class="features-grid">
         <div class="feature-card" v-for="(item, index) in featuresList" :key="index">
