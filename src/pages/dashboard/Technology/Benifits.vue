@@ -25,19 +25,19 @@ const benefits = [
   {
     id: 1,
     iconSvg: BenifitsIcon0,
-    title: 'Beyond keywords',
+    title: 'Beyond Keywords',
     description: 'Engagement-driven performance. Build contextual targeting at a global scale.'
   },
   {
     id: 2,
     iconSvg: BenifitsIcon1,
-    title: 'Privacy-first technology',
+    title: 'Privacy-first Technology',
     description: 'Contextual intelligence, not user tracking. Serving products that truly resonate.'
   },
   {
     id: 3,
     iconSvg: BenifitsIcon2,
-    title: 'Unrivaled precision',
+    title: 'Unrivaled Precision',
     description: 'Turning real-time signals into action with AI.'
   }
 ];

@@ -4,15 +4,15 @@
       <div class="hero-content">
         <h1 class="hero-title">
           <span class="gradient-text">Smarter AI.</span><br>
-          <span class="gradient-text">Precision targeting.</span><br>
-          <span class="gradient-text">Higher engagement.</span>
+          <span class="gradient-text">Precision Targeting.</span><br>
+          <span class="gradient-text">Higher Engagement.</span>
         </h1>
         <p class="hero-subtitle">
           Our AI contextual engine understands webpage context to connect you with truly interested users—maximizing precision while prioritizing privacy.
         </p>
       </div>
 
-      <div class="divider"></div>
+      <!-- <div class="divider"></div>
 
       <div class="trusted-section">
         <p class="trusted-text">Trusted by leading brands worldwide</p>
@@ -21,7 +21,7 @@
             {{ brand }}
           </span>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

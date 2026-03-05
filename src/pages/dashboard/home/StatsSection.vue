@@ -33,7 +33,7 @@ const statsData = [
   },
   {
     number: "2Bn+",
-    label: "Impressions Served",
+    label: "Unique Devices",
     color: "red",
     isUpArrow: true, // 显示向上箭头
   },

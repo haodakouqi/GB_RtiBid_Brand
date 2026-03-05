@@ -1,19 +1,22 @@
 <template>
-  <div class="home">
-    <AiHeader></AiHeader>
-    <Benifits></Benifits>
-    <Work></Work>
-    <AiPrecision></AiPrecision>
+  <div class="Technology">
+    <HeroSection></HeroSection>
+    <!-- 统计区 -->
+    <StatsSection></StatsSection>
+    
+    <!-- 功能区 features -->
+    <Features></Features>
+    <Cases></Cases>
+    <WhySection></WhySection>
   </div>
 </template>
 
 <script setup>
-import AiHeader from './AiHeader.vue'
-import Benifits from './Benifits.vue'
-import Work from './Work.vue'
-import AiPrecision from './AiPrecision.vue'
-
-
+import HeroSection from './HeroSection.vue'
+import StatsSection from './StatsSection.vue'
+import Features from './Features.vue'
+import Cases from './Cases.vue'
+import WhySection from './WhySection.vue'
 
 </script>
 

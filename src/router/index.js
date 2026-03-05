@@ -60,6 +60,14 @@ const routes = [
           title: '',
         },
         component: () => import('@/pages/dashboard/GetStarted/index.vue')
+      },
+      {
+        "path": "/Detail",
+        "name": "Detail",
+        "meta": {
+          title: '',
+        },
+        component: () => import('@/pages/dashboard/Detail/index.vue')
       }
       
     ]

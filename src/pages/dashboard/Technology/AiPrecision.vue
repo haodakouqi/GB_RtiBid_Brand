@@ -4,7 +4,7 @@
       <div class="section-header">
         <h2 class="section-title">
           <span class="title-gradient">AI-Powered Precision.</span><br>
-          <span class="title-dark">Data-Driven Growth.</span>
+          <span class="title-gradient">Data-Driven Growth.</span>
         </h2>
         <p class="section-subtitle">
           Harnesses massive data and real-time AI optimization to target high-value users with unparalleled accuracy.
@@ -43,7 +43,7 @@ const features = [
   {
     id: 3,
     icon: 'user-check', // 用户验证图标
-    title: 'Personalized ad recommendations',
+    title: 'Personalized Ad Recommendations',
     description: 'Personalized ad experiences, powered by deep analysis of user preferences from massive datasets, deliver measurable conversion lifts.'
   },
   {
@@ -82,22 +82,32 @@ const features = [
 }
 
 .title-gradient {
-  background: linear-gradient(90deg, #165DFF, #7B61FF);
+  text-align: center;
+  font-family: Alliance;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: 0.369px;
+
+  background: linear-gradient(90deg, #155DFC 0%, #492FEE 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.title-dark {
-  color: #1D2939;
-}
 
 .section-subtitle {
-  font-size: 1.125rem;
-  color: #475467;
-  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  width: 709px;
+  color: #4A5565;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.449px;
 }
 
 .features-grid {
@@ -113,11 +123,11 @@ const features = [
 }
 
 .feature-card {
-  background: #FFFFFF;
-  border: 1px solid #EAECF0;
-  border-radius: 0.75rem;
   padding: 2rem;
   transition: all 0.3s ease;
+
+  border-radius: 14px;
+  background: #F6F8FF;
 }
 
 .feature-card:hover {

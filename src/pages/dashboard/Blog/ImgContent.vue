@@ -2,87 +2,16 @@
   <div class="blog-container">
     <div class="blog-wrapper">
       <div class="blog-grid">
-        <!-- 卡片1 -->
-        <div class="blog-card">
+        <div v-for="blog in blogs" :key="blog.id" class="blog-card">
           <div class="card-image">
-            <img src="@/assets/Blog/BlogImage0.png" alt="AI-Driven DSPs" />
+            <img :src="blog.image" :alt="blog.alt" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">Why AI-Driven DSPs Are the Future of Ecommerce Advertising</h3>
+            <h3 class="card-title">{{ blog.title }}</h3>
             <p class="card-desc">
-              The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to...
+              {{ blog.description }}
             </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-
-        <!-- 卡片2 -->
-        <div class="blog-card">
-          <div class="card-image">
-            <img src="@/assets/Blog/BlogImage1.png" alt="Predictive Bidding" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">RtiBid's Predictive Bidding: How AI Helps Maximize Ecommerce ROI</h3>
-            <p class="card-desc">
-              The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid's predictive bidding technology solves t...
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-
-        <!-- 卡片3 -->
-        <div class="blog-card">
-          <div class="card-image">
-            <img src="@/assets/Blog/BlogImage2.png" alt="Dynamic Product Recommendations" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">RtiBid's AI-Powered Dynamic Product Recommendations</h3>
-            <p class="card-desc">
-              One of the key drivers of ecommerce success is personalized recommendations. RtiBid's AI-powered product recommendations engine d...
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-
-        <!-- 卡片4 -->
-        <div class="blog-card">
-          <div class="card-image">
-            <img src="@/assets/Blog/BlogImage3.png" alt="Contextual Advertising" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">The Future of Contextual Advertising: RtiBid's AI-Powered Approach</h3>
-            <p class="card-desc">
-              As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional b...
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-
-        <!-- 卡片5 -->
-        <div class="blog-card">
-          <div class="card-image">
-            <img src="@/assets/Blog/BlogImage4.png" alt="Full-Funnel Advertising" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">RtiBid's Full-Funnel Advertising Solution for Ecommerce</h3>
-            <p class="card-desc">
-              Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that...
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-
-        <!-- 卡片6 -->
-        <div class="blog-card">
-          <div class="card-image">
-            <img src="@/assets/Blog/BlogImage5.png" alt="Performance Marketing" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">RtiBid's AI-Powered Performance Marketing: A Game Changer for ...</h3>
-            <p class="card-desc">
-              As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. RtiBid's A...
-            </p>
-            <a href="#" class="read-more">Read More →</a>
+            <a href="javascript:void(0)" class="read-more" @click="handleScroll(blog.id)">Read More →</a>
           </div>
         </div>
       </div>
@@ -90,8 +19,70 @@
   </div>
 </template>
 
-<script setup lang="ts">
-// 组件逻辑可在此扩展
+<script setup>
+import BlogImage0 from '@/assets/Blog/BlogImage0.png';
+import BlogImage1 from '@/assets/Blog/BlogImage1.png';
+import BlogImage2 from '@/assets/Blog/BlogImage2.png';
+import BlogImage3 from '@/assets/Blog/BlogImage3.png';
+import BlogImage4 from '@/assets/Blog/BlogImage4.png';
+import BlogImage5 from '@/assets/Blog/BlogImage5.png';
+
+import { GlHookuseRouter } from '@/utils/methods'
+// import { useRouter as vueUseRouter, useRoute as vueUseRoute } from 'vue-router'
+const router = GlHookuseRouter()
+
+
+// 锚点平滑滚动方法
+const handleScroll = (name) => {
+  router.push('Detail', {
+    name: name
+  })
+}
+
+const blogs = [
+  {
+    id: 1,
+    image: BlogImage0,
+    alt: 'AI-Driven DSPs',
+    title: 'Why AI-Driven DSPs Are the Future of Ecommerce Advertising',
+    description: 'The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to...'
+  },
+  {
+    id: 2,
+    image: BlogImage1,
+    alt: 'Predictive Bidding',
+    title: 'RtiBid\'s Predictive Bidding: How AI Helps Maximize Ecommerce ROI',
+    description: 'The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid\'s predictive bidding technology solves t...'
+  },
+  {
+    id: 3,
+    image: BlogImage2,
+    alt: 'Dynamic Product Recommendations',
+    title: 'RtiBid\'s AI-Powered Dynamic Product Recommendations',
+    description: 'One of the key drivers of ecommerce success is personalized recommendations. RtiBid\'s AI-powered product recommendations engine d...'
+  },
+  {
+    id: 4,
+    image: BlogImage3,
+    alt: 'Contextual Advertising',
+    title: 'The Future of Contextual Advertising: RtiBid\'s AI-Powered Approach',
+    description: 'As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional b...'
+  },
+  {
+    id: 5,
+    image: BlogImage4,
+    alt: 'Full-Funnel Advertising',
+    title: 'RtiBid\'s Full-Funnel Advertising Solution for Ecommerce',
+    description: 'Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that...'
+  },
+  {
+    id: 6,
+    image: BlogImage5,
+    alt: 'Performance Marketing',
+    title: 'RtiBid\'s AI-Powered Performance Marketing: A Game Changer for ...',
+    description: 'As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. RtiBid\'s A...'
+  }
+];
 </script>
 
 <style lang="less" scoped>

@@ -26,19 +26,19 @@ const features = [
   {
     id: 1,
     image: work0, // 替换为你的语义智能图片
-    title: 'Semantic intelligence',
+    title: 'Semantic Intelligence',
     description: 'Leverages deep semantic understanding to go beyond keyword matching and broad category targeting.'
   },
   {
     id: 2,
     image: work1, // 替换为你的精准对齐图片
-    title: 'Precision alignment',
+    title: 'Precision Alignment',
     description: 'Enables product-to-URL alignment, ensuring ads appear on the most relevant pages.'
   },
   {
     id: 3,
     image: work2, // 替换为你的URL级粒度图片
-    title: 'URL-level granularity',
+    title: 'URL-level Granularity',
     description: 'Delivers granular targeting at the individual URL level — not just entire domains or sections.'
   }
 ];

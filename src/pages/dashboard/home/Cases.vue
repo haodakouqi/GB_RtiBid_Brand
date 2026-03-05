@@ -11,7 +11,7 @@
           <div class="case-content">
             <h3 class="case-title">{{ item.title }}</h3>
             <p class="case-desc">{{ item.desc }}</p>
-            <a href="#" class="case-link">View Case Study <span>↗</span></a>
+            <a href="javascript:void(0)" @click="handleScroll(item.title)" class="case-link">View Case Study <span>↗</span></a>
           </div>
         </div>
       </div>
@@ -28,6 +28,18 @@ import case2 from '@/assets/dashboard/case2.png'
 import case3 from '@/assets/dashboard/case3.png'
 import case4 from '@/assets/dashboard/case4.png'
 import case5 from '@/assets/dashboard/case5.png'
+
+import { GlHookuseRouter } from '@/utils/methods'
+// import { useRouter as vueUseRouter, useRoute as vueUseRoute } from 'vue-router'
+const router = GlHookuseRouter()
+
+
+// 锚点平滑滚动方法
+const handleScroll = (name) => {
+  router.push('Detail', {
+    name: name
+  })
+}
 
 // 案例数据
 const casesList = ref([
