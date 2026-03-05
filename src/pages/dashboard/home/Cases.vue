@@ -46,37 +46,37 @@ const casesList = ref([
   {
     id: 'Cases1',
     title: 'LOHILO',
-    desc: 'Fashion retailer increases conversion by 45%',
+    desc: 'How LOHILO Successfully Grew E-Commerce Sales',
     img: case0
   },
   {
     id: 'Cases2',
     title: 'Herbmed',
-    desc: 'E-commerce growth with AI-powered recommendations',
+    desc: "Herbmed – Demanding Challenges. Creative Solutions.",
     img: case1
   },
   {
     id: 'Cases3',
     title: 'Zen Pirlanta',
-    desc: 'Health tech scales user acquisition by 200%',
+    desc: "Zen Pırlanta Increases Brand Awareness Through Personalized Streaming Video Ads",
     img: case2
   },
   {
     id: 'Cases4',
     title: 'Tikla Gelsin',
-    desc: 'Service app doubles engagement rates',
+    desc: "Tıkla Gelsin Leverages Deep Learning for Winning In-APP Campaign",
     img: case3
   },
   {
     id: 'Cases5',
     title: 'Holdit',
-    desc: 'Travel brand achieves 3x ROI with targeted campaigns',
+    desc: 'Holdit – Effective Programmatic For eCommerce',
     img: case4
   },
   {
     id: 'Cases6',
     title: 'Westing',
-    desc: 'Apparel brand optimizes ad spend efficiency',
+    desc: "Westwing Grows Retargeting Revenue with RtiBid by 81% over Black Friday",
     img: case5
   }
 ])

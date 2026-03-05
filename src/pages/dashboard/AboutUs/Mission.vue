@@ -36,14 +36,14 @@
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
 @max-content-width: 1280px;
-@title-color: #0f172a;
-@text-color: #334155;
+@title-color: #101828;
+@text-color: #4A5565;
 @bg-color: #f8fafc;
 
 .mission-section {
   width: 100%;
   box-sizing: border-box;
-  background-color: @bg-color;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 50%, #FAF5FF 100%);
   padding: 64px @desktop-padding-x;
 
   &__container {

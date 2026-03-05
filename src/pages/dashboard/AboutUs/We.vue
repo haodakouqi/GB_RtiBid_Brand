@@ -23,14 +23,14 @@
 @breakpoint: 768px;
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
-@title-color: #0f172a;
-@text-color: #475569;
-@strong-color: #0f172a;
+@title-color: #101828;
+@text-color: #4A5565;
+@strong-color: #155DFC;
 
 .about-section {
   width: 100%;
   box-sizing: border-box;
-  padding: 64px @desktop-padding-x; // 桌面端内边距
+  padding: 96px @desktop-padding-x; // 桌面端内边距
 
   &__container {
     max-width: 1280px;
@@ -63,7 +63,7 @@
 
     strong {
       color: @strong-color;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 }

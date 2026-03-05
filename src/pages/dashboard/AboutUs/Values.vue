@@ -162,11 +162,14 @@
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.6;
     color: @text-color;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: -0.312px;
   }
 }
 

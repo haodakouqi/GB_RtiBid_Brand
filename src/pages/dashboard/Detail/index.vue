@@ -63,8 +63,8 @@ const caseData = computed(() => {
 
 // 设计图风格变量
 @primary-color: #2D5AF1;    // 主色（设计图蓝色）
-@text-dark: #1A1A1A;        // 深色文本
-@text-gray: #666666;        // 灰色文本
+@text-dark: #101828;        // 深色文本
+@text-gray: #4A5565;        // 灰色文本
 @card-bg: #FFFFFF;          // 卡片背景
 @border-radius: 12px;       // 圆角
 @shadow: 0 4px 12px rgba(0, 0, 0, 0.08); // 阴影

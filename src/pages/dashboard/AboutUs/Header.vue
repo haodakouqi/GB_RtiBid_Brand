@@ -30,15 +30,14 @@
 // 定义通用变量，便于统一维护
 @breakpoint: 768px;
 @border-color: #e2e8f0;
-@text-color: #1e293b;
-@sub-text-color: #64748b;
-@bg-color: #f8fafc;
+@text-color: #101828;
+@sub-text-color: #4A5565;
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
 
 // 核心卡片样式
 .quote-card {
-  background-color: @bg-color;
+  background: #F6F9FE;
   border-radius: 12px;
   width: 100%;
   box-sizing: border-box;

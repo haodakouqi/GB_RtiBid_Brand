@@ -9,7 +9,7 @@
       <div class="impact-section__content">
         <div class="impact-section__metrics">
           <div class="metric-item">
-            <div class="metric-item__value">Avg 2.9%</div>
+            <div class="metric-item__value">Avg <span>2.9%</span></div>
             <div class="metric-item__label">Total site GMV uplift for partners</div>
           </div>
 
@@ -51,16 +51,15 @@
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
 @max-content-width: 1280px;
-@title-color: #0f172a;
-@text-color: #334155;
-@sub-text-color: #475569;
-@bg-color: #f8fafc;
+@title-color: #101828;
+@text-color: #4A5565;
+@sub-text-color: #4A5565;
 @card-radius: 12px;
 
 .impact-section {
   width: 100%;
   box-sizing: border-box;
-  background-color: @bg-color;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 50%, #FAF5FF 100%);
   padding: 64px @desktop-padding-x;
 
   &__container {
@@ -121,7 +120,16 @@
     font-weight: 700;
     color: @title-color;
     margin-bottom: 8px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    letter-spacing: 0.369px;
+    & span {
+      font-size: 34px;
+      color: #155DFC;
+    }
   }
 
   &__label {
