@@ -37,12 +37,12 @@
             </div>
             <section class="privacy-content">
               <article class="privacy-content__inner">
-                <p>This Privacy Policy describes how Shopera Inc. ("we," "us," "our") collects, uses, discloses, and
+                <p>This Privacy Policy describes how  Inc. ("we," "us," "our") collects, uses, discloses, and
                   processes personal information in connection with our demand-side platform ("DSP") and related advertising
                   technology services.</p>
 
                 <h2 id="our-services">1. Our Services</h2>
-                <p>Shopera provides a technology platform that enables advertisers and agencies to purchase digital
+                <p> provides a technology platform that enables advertisers and agencies to purchase digital
                   advertising inventory ("Ad Inventory") through automated auctions. We do not own or operate the websites or
                   apps where ads are displayed. This policy focuses on data processed in our role as a DSP.</p>
 
@@ -178,7 +178,7 @@
 
                 <h2 id="contact-us">12. Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-                <p>Shopera Inc.<br>
+                <p> Inc.<br>
                   <!--          [Your Physical Address]<br>-->
                   privacy@.com<br>
                   .com</p>
