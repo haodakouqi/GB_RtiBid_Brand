@@ -10,8 +10,8 @@
     </div>
 
     <div class="container">
-      <h1 class="title">Contact US</h1>
-      <p class="subtitle">See What Our Experts Can Do For You.</p>
+      <h1 class="title">Contact Us</h1>
+      <p class="subtitle">Expert Solutions, Delivered.</p>
 
       <form @submit.prevent="handleSubmit" class="form">
         <!-- 第一行：姓名 + 邮箱 -->
@@ -62,7 +62,7 @@
               class="form-select"
               @change="validateField('country')"
             >
-              <option value="">Select Country</option>
+              <option value="">Please Select</option>
               <option v-for="item in countryOptions" :key="item.value" :value="item.value">
                 {{ item.label }}
               </option>
@@ -87,17 +87,20 @@
 
           <div class="form-group">
             <label class="form-label">Company Type</label>
-            <input
+            <select
               v-model="form.companyType"
-              type="text"
-              class="form-input"
-              placeholder="Enter Company Type"
-            />
+              class="form-select"
+            >
+              <option value="">Please Select</option>
+              <option v-for="item in companyTypeOptions" :key="item.value" :value="item.value">
+                {{ item.label }}
+              </option>
+            </select>
           </div>
         </div>
 
         <!-- 兴趣领域 -->
-        <div class="form-group full-width">
+        <!-- <div class="form-group full-width">
           <label class="form-label">I am interested in...(Multiple choice)</label>
           <input
             v-model="form.interests"
@@ -105,17 +108,21 @@
             class="form-input"
             placeholder="Enter"
           />
-        </div>
+        </div> -->
 
         <!-- 来源渠道 -->
         <div class="form-group full-width">
           <label class="form-label">How did you hear about us?</label>
-          <input
+
+          <select
             v-model="form.source"
-            type="text"
-            class="form-input"
-            placeholder="Enter"
-          />
+            class="form-select"
+          >
+            <option value="">Please Select</option>
+            <option v-for="item in sourceOptions" :key="item.value" :value="item.value">
+              {{ item.label }}
+            </option>
+          </select>
         </div>
 
         <!-- 提交按钮 -->
@@ -206,6 +213,23 @@ const countryOptions = [
   { value: 'Other', label: 'Other' }
 ]
 
+const sourceOptions = [
+  { value: 'Sales & Consultants', label: 'Sales & Consultants' },
+  { value: 'Events & Expo', label: 'Events & Expo' },
+  { value: 'Social Media', label: 'Social Media' },
+  { value: 'News', label: 'News' },
+  { value: 'Search engine', label: 'Search engine' },
+  { value: 'Email Direct Marketing', label: 'Email Direct Marketing' }
+]
+
+const companyTypeOptions = [
+  { value: 'Advertising', label: 'Advertising' },
+  { value: 'Partnership', label: 'Partnership' },
+  { value: 'Careers', label: 'Careers' },
+  { value: 'Media Inquiry', label: 'Media Inquiry' },
+  { value: 'Other', label: 'Other' },
+]
+
 // 字段校验方法
 const validateField = (field) => {
   switch (field) {
@@ -249,13 +273,15 @@ const validateForm = () => {
 // 提交处理
 const handleSubmit = () => {
   if (validateForm()) {
-    // 模拟提交成功
-    showSuccess.value = true
-    
-    // 3秒后隐藏成功消息
     setTimeout(() => {
-      showSuccess.value = false
-    }, 3000)
+      // 模拟提交成功
+      showSuccess.value = true
+      
+      // 3秒后隐藏成功消息
+      setTimeout(() => {
+        showSuccess.value = false
+      }, 3000)
+    }, 500);
 
     // 重置表单
     // Object.keys(form).forEach(key => {

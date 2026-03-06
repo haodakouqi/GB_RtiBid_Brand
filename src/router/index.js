@@ -38,7 +38,7 @@ const routes = [
         component: () => import('@/pages/dashboard/Technology/index.vue')
       },
       {
-        "path": "/AboutUs",
+        "path": "/about",
         "name": "AboutUs",
         "meta": {
           title: '',
@@ -46,7 +46,7 @@ const routes = [
         component: () => import('@/pages/dashboard/AboutUs/index.vue')
       },
       {
-        "path": "/Blog",
+        "path": "/blog",
         "name": "Blog",
         "meta": {
           title: '',
@@ -54,7 +54,7 @@ const routes = [
         component: () => import('@/pages/dashboard/Blog/index.vue')
       },
       {
-        "path": "/GetStarted",
+        "path": "/contact",
         "name": "GetStarted",
         "meta": {
           title: '',
@@ -62,7 +62,7 @@ const routes = [
         component: () => import('@/pages/dashboard/GetStarted/index.vue')
       },
       {
-        "path": "/Detail",
+        "path": "/detail",
         "name": "Detail",
         "meta": {
           title: '',

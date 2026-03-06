@@ -127,10 +127,13 @@ const casesList = ref([
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     position: relative;
-    // .case-card:hover {
-    //   transform: translateY(-8px);
-    //   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    // }
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      .case-img {
+        transform: scale(1.08);
+      }
+    }
     
     .case-img_box {
       position: relative;
@@ -156,9 +159,7 @@ const casesList = ref([
         }
       }
     }
-    .case-card:hover .case-img {
-      transform: scale(1.08);
-    }
+   
     .case-content {
       padding: 20px;
       position: absolute;

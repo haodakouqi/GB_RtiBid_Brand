@@ -3,9 +3,9 @@
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">
-          <span class="gradient-text">Smarter AI.</span><br>
-          <span class="gradient-text">Precision Targeting.</span><br>
-          <span class="gradient-text">Higher Engagement.</span>
+          <span class="gradient-text">Smarter AI</span><br>
+          <span class="gradient-text">Precision Targeting</span><br>
+          <span class="gradient-text">Higher Engagement</span>
         </h1>
         <p class="hero-subtitle">
           Our AI contextual engine understands webpage context to connect you with truly interested users—maximizing precision while prioritizing privacy.

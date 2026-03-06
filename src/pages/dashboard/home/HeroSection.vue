@@ -15,7 +15,7 @@
             <br />Transform your advertising with intelligent automation.
         </p>
         <button class="hero-btn" @click="handleScroll('GetStarted')">
-            Get Started <span class="arrow">→</span>
+            Contact Us <span class="arrow">→</span>
         </button>
         </div>
     </section>

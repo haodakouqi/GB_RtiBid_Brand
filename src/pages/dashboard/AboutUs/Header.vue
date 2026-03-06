@@ -72,6 +72,8 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    justify-content: flex-end;
+    padding-right: 24px;
   }
 
   &__avatar {

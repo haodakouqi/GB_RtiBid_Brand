@@ -11,7 +11,7 @@
             <a @click="handleScroll(item.id)" class="nav-link" :class="{'active': routeName === item.id}">{{ item.name }}</a>
           </li>
         </ul>
-        <button class="nav-btn" @click="handleScroll('GetStarted')">Get Started</button>
+        <button class="nav-btn" @click="handleScroll('GetStarted')">Contact Us</button>
         <!-- 移动端菜单按钮 -->
         <button class="menu-toggle" @click="toggleMenu">
           <span class="menu-icon"></span>
@@ -26,7 +26,7 @@
             <a @click="handleScroll(item.id); toggleMenu()" class="mobile-nav-link" :class="{'active': routeName === item.id}">{{ item.name }}</a>
           </li>
           <li class="mobile-nav-item">
-            <button class="mobile-nav-btn" @click="handleScroll('GetStarted'); toggleMenu()">Get Started</button>
+            <button class="mobile-nav-btn" @click="handleScroll('GetStarted'); toggleMenu()">Contact Us</button>
           </li>
         </ul>
       </div>
@@ -66,17 +66,17 @@ const navList = ref([
     id: 'home'
   },
   {
-    name: 'Our Technology',
+    name: 'Technology',
     id: 'technology'
+  },
+  {
+    name: 'Blog',
+    id: 'Blog'
   },
   {
     name: 'About Us',
     id: 'AboutUs'
   },
-  {
-    name: 'Blog',
-    id: 'Blog'
-  }
 ])
 
 // 移动端菜单状态
