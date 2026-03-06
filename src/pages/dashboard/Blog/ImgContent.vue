@@ -51,6 +51,8 @@ const handleScroll = (name) => {
       gap: 32px;
 
       .blog-card {
+        display: flex;
+        flex-direction: column;
         background: #fff;
         border-radius: 8px;
         overflow: hidden;
@@ -79,7 +81,11 @@ const handleScroll = (name) => {
         }
 
         .card-content {
+          flex: 1;
           padding: 20px;
+          display: flex;
+          flex-direction: column;
+
 
           .card-title {
             margin: 0 0 12px;
@@ -93,6 +99,7 @@ const handleScroll = (name) => {
           }
 
           .card-desc {
+            flex: 1;
             font-size: 16px;
             line-height: 1.6;
             color: #4A5565;
