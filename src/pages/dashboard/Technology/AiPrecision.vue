@@ -99,7 +99,7 @@ const features = [
 
 .section-subtitle {
   margin: 0 auto;
-  width: 709px;
+  max-width: 709px;
   color: #4A5565;
   text-align: center;
   font-family: Inter;
