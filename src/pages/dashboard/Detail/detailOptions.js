@@ -216,7 +216,7 @@ const articles = [
       "id": "Cases1",
       "image": case0,
       "metaTitle": "How LOHILO Successfully Grew E-Commerce Sales",
-      "metaDescription": "With programmatic advertising, LOHILO managed to take their marketing efforts from great to amazing. After launching high quality campaigns for their e-commerce, the company grew by 88% in the first half of 2020.",
+      "metaDescription": "With programmatic advertising, LOHILO managed to take their marketing efforts from great to amazing. After launching high quality campaigns for their e-commerce, the company grew by 88% in the first half of 2020. Today, LOHILO is listed on the Stockholm stock market with products nation-wide in Sweden and a fast growing e-commerce, selling products within fashion, functional foods and drinks.",
       "articleContent": {
           "sections": [
               {
@@ -336,9 +336,7 @@ const articles = [
                   "title": "What they say about us",
                   "content": `“Our goal at Zen Pırlanta was to enhance our branding activities and grow our audience. We are very satisfied with our successful cooperation with RtiBid. Once they explained their strategy and implemented the relevant technologies, we were able to see positive results in all phases, especially related to the impressive reach and completed views. We can definitely recommend them for such campaigns.”
 
-                  Can Aydıner
-
-                  E-Commerce Coordinator, Zen Pırlanta
+                  Can Aydıner —— E-Commerce Coordinator, Zen Pırlanta
                   `
               },
               {
@@ -347,9 +345,7 @@ const articles = [
 
                   As competitors increased their brand awareness, Zen Pırlanta needed to think of new strategies to reach a larger number of potential purchasers while maintaining the high value of their brand.
 
-                  Their challenge was to generate better visibility and awareness for the same ad spend, so they chose to launch upper-funnel brand awareness campaigns in which sales contribution was not a KPI. The challenge for RtiBid was to show the expanding brand the value of such advertising.
-
-                  a hand wearing silver ring`
+                  Their challenge was to generate better visibility and awareness for the same ad spend, so they chose to launch upper-funnel brand awareness campaigns in which sales contribution was not a KPI. The challenge for RtiBid was to show the expanding brand the value of such advertising.`
               },
               {
                   "title": "The solution",

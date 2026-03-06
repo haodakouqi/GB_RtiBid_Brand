@@ -89,11 +89,11 @@ const features = [
   font-weight: 600;
   line-height: 56px; /* 116.667% */
   letter-spacing: 0.369px;
-  color: #101828;
-  // background: linear-gradient(90deg, #155DFC 0%, #492FEE 100%);
-  // background-clip: text;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+  
+  background: linear-gradient(90deg, #155DFC 0%, #492FEE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 

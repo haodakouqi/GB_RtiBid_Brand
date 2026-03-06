@@ -7,9 +7,9 @@
             <img :src="blog.image" :alt="blog.alt" />
           </div>
           <div class="card-content">
-            <h3 class="card-title">{{ blog.title }}</h3>
+            <h3 class="card-title">{{ blog.articleTitle }}</h3>
             <p class="card-desc">
-              {{ blog.description }}
+              {{ blog.metaDescription }}
             </p>
             <a href="javascript:void(0)" class="read-more" @click="handleScroll(blog.id)">Read More →</a>
           </div>
@@ -20,69 +20,19 @@
 </template>
 
 <script setup>
-import BlogImage0 from '@/assets/Blog/BlogImage0.png';
-import BlogImage1 from '@/assets/Blog/BlogImage1.png';
-import BlogImage2 from '@/assets/Blog/BlogImage2.png';
-import BlogImage3 from '@/assets/Blog/BlogImage3.png';
-import BlogImage4 from '@/assets/Blog/BlogImage4.png';
-import BlogImage5 from '@/assets/Blog/BlogImage5.png';
-
 import { GlHookuseRouter } from '@/utils/methods'
 // import { useRouter as vueUseRouter, useRoute as vueUseRoute } from 'vue-router'
 const router = GlHookuseRouter()
 
+import detailOptions from '../Detail/detailOptions.js';
 
+const blogs = detailOptions.slice(0, 6);
 // 锚点平滑滚动方法
 const handleScroll = (name) => {
   router.push('Detail', {
     name: name
   })
 }
-
-const blogs = [
-  {
-    id: 'article1',
-    image: BlogImage0,
-    alt: 'AI-Driven DSPs',
-    title: 'Why AI-Driven DSPs Are the Future of Ecommerce Advertising',
-    description: 'The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to...'
-  },
-  {
-    id: 'article2',
-    image: BlogImage1,
-    alt: 'Predictive Bidding',
-    title: 'RtiBid\'s Predictive Bidding: How AI Helps Maximize Ecommerce ROI',
-    description: 'The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid\'s predictive bidding technology solves t...'
-  },
-  {
-    id: 'article3',
-    image: BlogImage2,
-    alt: 'Dynamic Product Recommendations',
-    title: 'RtiBid\'s AI-Powered Dynamic Product Recommendations',
-    description: 'One of the key drivers of ecommerce success is personalized recommendations. RtiBid\'s AI-powered product recommendations engine d...'
-  },
-  {
-    id: 'article4',
-    image: BlogImage3,
-    alt: 'Contextual Advertising',
-    title: 'The Future of Contextual Advertising: RtiBid\'s AI-Powered Approach',
-    description: 'As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional b...'
-  },
-  {
-    id: 'article5',
-    image: BlogImage4,
-    alt: 'Full-Funnel Advertising',
-    title: 'RtiBid\'s Full-Funnel Advertising Solution for Ecommerce',
-    description: 'Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that...'
-  },
-  {
-    id: 'article6',
-    image: BlogImage5,
-    alt: 'Performance Marketing',
-    title: 'RtiBid\'s AI-Powered Performance Marketing: A Game Changer for ...',
-    description: 'As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. RtiBid\'s A...'
-  }
-];
 </script>
 
 <style lang="less" scoped>
@@ -91,7 +41,7 @@ const blogs = [
   padding: 50px 0 69px;
 
   .blog-wrapper {
-    max-width: 1280px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 24px;
 

@@ -36,9 +36,12 @@
   &__title {
     font-size: 48px;
     font-weight: 700;
-    color: #101828;
     margin: 0 0 32px;
-    line-height: 1.1;
+    line-height: 1.3;
+    background: linear-gradient(90deg, #155DFC 0%, #492FEE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__subtitle {
