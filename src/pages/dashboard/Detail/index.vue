@@ -308,6 +308,8 @@ const caseData = computed(() => {
       color: @text-gray;
       line-height: 1.8;
       margin: 0;
+      white-space: pre-line;
+
 
       @media (min-width: @mobile-breakpoint) {
         font-size: 17px;
