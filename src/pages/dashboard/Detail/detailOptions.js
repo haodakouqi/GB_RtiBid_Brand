@@ -17,29 +17,29 @@ const articles = [
   {
     "id": "article1",
     "image": BlogImage0,
-    "articleTitle": "Why AI-Driven DSPs Like Rtibid Are Transforming Ecommerce Advertising",
-    "metaTitle": "Why AI-Driven DSPs Like Rtibid Are Transforming Ecommerce Advertising",
-    "metaDescription": "AI-powered DSPs, like Rtibid, offer smarter, ROI-based advertising for ecommerce brands. Learn how our AI-driven platform drives real-time optimization and increased GMV.",
+    "articleTitle": "Why AI-Driven DSPs Like RtiBid Are Transforming Ecommerce Advertising",
+    "metaTitle": "Why AI-Driven DSPs Like RtiBid Are Transforming Ecommerce Advertising",
+    "metaDescription": "AI-powered DSPs, like RtiBid, offer smarter, ROI-based advertising for ecommerce brands. Learn how our AI-driven platform drives real-time optimization and increased GMV.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to scale efficiently. Rtibid is at the forefront of this transformation, providing performance-driven advertising that focuses on measurable ROI rather than vanity metrics."
+          "content": "The rise of AI-driven platforms has revolutionized the world of digital advertising, particularly for ecommerce brands looking to scale efficiently. RtiBid is at the forefront of this transformation, providing performance-driven advertising that focuses on measurable ROI rather than vanity metrics."
         },
         {
           "title": "What is an AI-Driven DSP?",
-          "content": "An AI-driven Demand-Side Platform (DSP) is a digital advertising technology that uses machine learning algorithms to optimize ad buying in real-time. Unlike traditional DSPs that rely on manual bidding and targeting, AI-driven platforms like Rtibid analyze vast amounts of data to predict which ads will drive the highest conversion rates."
+          "content": "An AI-driven Demand-Side Platform (DSP) is a digital advertising technology that uses machine learning algorithms to optimize ad buying in real-time. Unlike traditional DSPs that rely on manual bidding and targeting, AI-driven platforms like RtiBid analyze vast amounts of data to predict which ads will drive the highest conversion rates."
         },
         {
-          "title": "How Rtibid Works",
-          "content": "Rtibid's AI-powered DSP allows ecommerce brands to bid intelligently based on predicted outcomes, optimizing for incremental GMV rather than just impressions. The platform uses predictive models, dynamic product intelligence, and contextual targeting to ensure ads are shown to the most relevant audiences at the optimal time."
+          "title": "How RtiBid Works",
+          "content": "RtiBid's AI-powered DSP allows ecommerce brands to bid intelligently based on predicted outcomes, optimizing for incremental GMV rather than just impressions. The platform uses predictive models, dynamic product intelligence, and contextual targeting to ensure ads are shown to the most relevant audiences at the optimal time."
         },
         {
           "title": "The Benefits for Ecommerce Brands",
           "list": [
-            "Predictive Bidding: Rtibid's AI predicts which ad impressions are most likely to lead to conversions, maximizing ad spend efficiency.",
+            "Predictive Bidding: RtiBid's AI predicts which ad impressions are most likely to lead to conversions, maximizing ad spend efficiency.",
             "Real-Time Optimization: Ads are continuously adjusted based on performance data, ensuring optimal results throughout the campaign.",
-            "Incremental GMV Measurement: Rtibid measures the true impact of advertising, ensuring that brands only pay for real, measurable sales."
+            "Incremental GMV Measurement: RtiBid measures the true impact of advertising, ensuring that brands only pay for real, measurable sales."
           ]
         }
       ]
@@ -48,32 +48,32 @@ const articles = [
   {
     "id": "article2",
     "image": BlogImage1,
-    "articleTitle": "Rtibid's Predictive Bidding: How AI Helps Maximize Ecommerce ROI",
-    "metaTitle": "Maximize Ecommerce ROI with Rtibid's Predictive Bidding Technology",
-    "metaDescription": "Discover how Rtibid's predictive bidding technology leverages AI to drive smarter, ROI-based advertising for ecommerce brands.",
+    "articleTitle": "RtiBid's Predictive Bidding: How AI Helps Maximize Ecommerce ROI",
+    "metaTitle": "Maximize Ecommerce ROI with RtiBid's Predictive Bidding Technology",
+    "metaDescription": "Discover how RtiBid's predictive bidding technology leverages AI to drive smarter, ROI-based advertising for ecommerce brands.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. Rtibid's predictive bidding technology solves this problem by allowing ecommerce brands to only bid on ad impressions that are most likely to convert."
+          "content": "The challenge for many ecommerce advertisers is maximizing ROI while minimizing waste. RtiBid's predictive bidding technology solves this problem by allowing ecommerce brands to only bid on ad impressions that are most likely to convert."
         },
         {
           "title": "What is Predictive Bidding?",
-          "content": "Predictive bidding uses machine learning algorithms to predict the likelihood of a conversion before the bid is placed. Rtibid analyzes user intent signals, product relevance, and real-time data to optimize bid placement."
+          "content": "Predictive bidding uses machine learning algorithms to predict the likelihood of a conversion before the bid is placed. RtiBid analyzes user intent signals, product relevance, and real-time data to optimize bid placement."
         },
         {
-          "title": "How Rtibid's Predictive Bidding Works",
+          "title": "How RtiBid's Predictive Bidding Works",
           "list": [
-            "Real-Time Data Analysis: Rtibid gathers real-time data from user actions across your site and external media sources.",
+            "Real-Time Data Analysis: RtiBid gathers real-time data from user actions across your site and external media sources.",
             "AI-Powered Predictions: The system uses AI to predict which ads are most likely to result in conversions based on previous data and patterns.",
-            "Smart Budget Allocation: Rtibid's predictive bidding ensures that your ad spend is allocated efficiently, driving higher returns with lower risk."
+            "Smart Budget Allocation: RtiBid's predictive bidding ensures that your ad spend is allocated efficiently, driving higher returns with lower risk."
           ]
         },
         {
           "title": "The Benefits of Predictive Bidding",
           "list": [
             "Increased Conversion Rates: By bidding on high-value impressions, brands can significantly increase their conversion rates.",
-            "Lower CPC & CPM: With predictive bidding, Rtibid reduces wasted ad spend by only targeting high-probability users.",
+            "Lower CPC & CPM: With predictive bidding, RtiBid reduces wasted ad spend by only targeting high-probability users.",
             "Scalable Growth: Predictive bidding ensures that your ad budget is used effectively, enabling scalable growth without overspending."
           ]
         }
@@ -83,18 +83,18 @@ const articles = [
   {
     "id": "article3",
     "image": BlogImage2,
-    "articleTitle": "Rtibid's AI-Powered Dynamic Product Recommendations",
-    "metaTitle": "Boost Ecommerce Conversions with Rtibid's AI-Powered Product Recommendations",
-    "metaDescription": "Learn how Rtibid's AI-powered product recommendations help ecommerce brands increase conversions by delivering relevant products to users in real-time.",
+    "articleTitle": "RtiBid's AI-Powered Dynamic Product Recommendations",
+    "metaTitle": "Boost Ecommerce Conversions with RtiBid's AI-Powered Product Recommendations",
+    "metaDescription": "Learn how RtiBid's AI-powered product recommendations help ecommerce brands increase conversions by delivering relevant products to users in real-time.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "One of the key drivers of ecommerce success is personalized recommendations. Rtibid's AI-powered product recommendation engine delivers dynamic, real-time recommendations that are tailored to each user's behavior and intent."
+          "content": "One of the key drivers of ecommerce success is personalized recommendations. RtiBid's AI-powered product recommendation engine delivers dynamic, real-time recommendations that are tailored to each user's behavior and intent."
         },
         {
-          "title": "How Rtibid's AI Product Recommendations Work",
-          "content": "Rtibid uses advanced AI algorithms to evaluate user behavior, product relevance, and historical data to dynamically select and display the most relevant products. The system takes into account:",
+          "title": "How RtiBid's AI Product Recommendations Work",
+          "content": "RtiBid uses advanced AI algorithms to evaluate user behavior, product relevance, and historical data to dynamically select and display the most relevant products. The system takes into account:",
           "list": [
             "User browsing history",
             "Product complementarity",
@@ -106,7 +106,7 @@ const articles = [
           "title": "Why AI Product Recommendations Matter for Ecommerce",
           "list": [
             "Higher Conversion Rates: Personalized recommendations increase the likelihood of a sale by showing users products they are more likely to purchase.",
-            "Reduced Bounce Rates: By offering relevant products, Rtibid keeps users engaged, reducing bounce rates.",
+            "Reduced Bounce Rates: By offering relevant products, RtiBid keeps users engaged, reducing bounce rates.",
             "Improved Average Order Value (AOV): Cross-sell and upsell recommendations drive higher AOV."
           ]
         }
@@ -116,21 +116,21 @@ const articles = [
   {
     "id": "article4",
     "image": BlogImage3,
-    "articleTitle": "The Future of Contextual Advertising: Rtibid's AI-Powered Approach",
-    "metaTitle": "Rtibid's AI-Powered Contextual Advertising: The Future of Ecommerce Marketing",
-    "metaDescription": "Explore how Rtibid's AI-powered contextual advertising helps ecommerce brands deliver relevant ads without relying on cookies.",
+    "articleTitle": "The Future of Contextual Advertising: RtiBid's AI-Powered Approach",
+    "metaTitle": "RtiBid's AI-Powered Contextual Advertising: The Future of Ecommerce Marketing",
+    "metaDescription": "Explore how RtiBid's AI-powered contextual advertising helps ecommerce brands deliver relevant ads without relying on cookies.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional behavior-based advertising. Rtibid's AI-powered contextual advertising technology delivers relevant ads based on the content a user is engaging with, rather than relying on personal data or cookies."
+          "content": "As privacy regulations continue to tighten, contextual advertising is becoming an increasingly popular alternative to traditional behavior-based advertising. RtiBid's AI-powered contextual advertising technology delivers relevant ads based on the content a user is engaging with, rather than relying on personal data or cookies."
         },
         {
           "title": "What is Contextual Advertising?",
-          "content": "Contextual advertising targets users based on the content of the page they are viewing, not their past behavior or demographic information. Rtibid's AI-driven contextual engine analyzes the text, images, and sentiment of a webpage to match ads with the most relevant content."
+          "content": "Contextual advertising targets users based on the content of the page they are viewing, not their past behavior or demographic information. RtiBid's AI-driven contextual engine analyzes the text, images, and sentiment of a webpage to match ads with the most relevant content."
         },
         {
-          "title": "Why Rtibid's Contextual Advertising is the Future",
+          "title": "Why RtiBid's Contextual Advertising is the Future",
           "list": [
             "Privacy-Friendly: No reliance on cookies or personal data.",
             "Relevance at Scale: AI ensures that ads are displayed in the most relevant contexts, even across millions of impressions.",
@@ -143,18 +143,18 @@ const articles = [
   {
     "id": "article5",
     "image": BlogImage4,
-    "articleTitle": "Rtibid's Full-Funnel Advertising Solution for Ecommerce",
-    "metaTitle": "Full-Funnel Ecommerce Advertising with Rtibid's AI-Powered Solutions",
-    "metaDescription": "Rtibid offers a full-funnel ecommerce advertising solution that drives measurable results from awareness to conversion.",
+    "articleTitle": "RtiBid's Full-Funnel Advertising Solution for Ecommerce",
+    "metaTitle": "Full-Funnel Ecommerce Advertising with RtiBid's AI-Powered Solutions",
+    "metaDescription": "RtiBid offers a full-funnel ecommerce advertising solution that drives measurable results from awareness to conversion.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "Ecommerce brands need to engage customers across every stage of the buyer journey. Rtibid provides a full-funnel advertising solution that guides shoppers from awareness to conversion, all while delivering measurable ROI."
+          "content": "Ecommerce brands need to engage customers across every stage of the buyer journey. RtiBid provides a full-funnel advertising solution that guides shoppers from awareness to conversion, all while delivering measurable ROI."
         },
         {
-          "title": "How Rtibid's Full-Funnel Advertising Works",
-          "content": "Rtibid's platform integrates multiple advertising strategies to target users at each stage of the funnel:",
+          "title": "How RtiBid's Full-Funnel Advertising Works",
+          "content": "RtiBid's platform integrates multiple advertising strategies to target users at each stage of the funnel:",
           "list": [
             "Top-of-Funnel (TOF): Awareness and engagement via display ads and video.",
             "Mid-Funnel (MOF): Retargeting and dynamic creative optimization to drive interest and consideration.",
@@ -164,9 +164,9 @@ const articles = [
         {
           "title": "Why Full-Funnel Advertising Matters for Ecommerce",
           "list": [
-            "Optimized Ad Spend: Rtibid ensures that brands engage customers at the right stage with the right message.",
+            "Optimized Ad Spend: RtiBid ensures that brands engage customers at the right stage with the right message.",
             "Higher Conversion Rates: Full-funnel campaigns increase the likelihood of converting users by targeting them with relevant ads throughout their journey.",
-            "Seamless Integration: Rtibid's technology integrates with multiple ad platforms for a unified strategy."
+            "Seamless Integration: RtiBid's technology integrates with multiple ad platforms for a unified strategy."
           ]
         }
       ]
@@ -175,29 +175,29 @@ const articles = [
   {
     "id": "article6",
     "image": BlogImage5,
-    "articleTitle": "Rtibid's AI-Powered Performance Marketing: A Game Changer for Ecommerce",
-    "metaTitle": "Transform Ecommerce Marketing with Rtibid's AI-Powered Performance Advertising",
-    "metaDescription": "Rtibid's AI-powered performance marketing solution helps ecommerce brands drive incremental sales and optimize their advertising spend for maximum ROI.",
+    "articleTitle": "RtiBid's AI-Powered Performance Marketing: A Game Changer for Ecommerce",
+    "metaTitle": "Transform Ecommerce Marketing with RtiBid's AI-Powered Performance Advertising",
+    "metaDescription": "RtiBid's AI-powered performance marketing solution helps ecommerce brands drive incremental sales and optimize their advertising spend for maximum ROI.",
     "articleContent": {
       "sections": [
         {
           "title": "Introduction",
-          "content": "As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. Rtibid's AI-powered performance marketing platform enables ecommerce brands to optimize ad spend, drive incremental GMV, and improve ROI."
+          "content": "As competition in the ecommerce space continues to grow, brands need smarter advertising solutions to stay ahead. RtiBid's AI-powered performance marketing platform enables ecommerce brands to optimize ad spend, drive incremental GMV, and improve ROI."
         },
         {
-          "title": "How Rtibid's AI-Powered Performance Marketing Works",
+          "title": "How RtiBid's AI-Powered Performance Marketing Works",
           "list": [
-            "AI-Driven Bidding: Rtibid uses machine learning to optimize bids based on predicted outcomes, ensuring your ad spend is allocated efficiently.",
+            "AI-Driven Bidding: RtiBid uses machine learning to optimize bids based on predicted outcomes, ensuring your ad spend is allocated efficiently.",
             "Predictive Analytics: The platform uses predictive analytics to target users with high conversion potential, maximizing ROAS.",
             "Dynamic Product Recommendations: AI identifies the most relevant products to display, increasing the likelihood of a sale."
           ]
         },
         {
-          "title": "The Benefits of Rtibid's AI-Powered Performance Marketing",
+          "title": "The Benefits of RtiBid's AI-Powered Performance Marketing",
           "list": [
             "Higher ROI: AI ensures that ad spend is only directed toward high-value opportunities.",
-            "Increased Sales: Rtibid helps brands achieve incremental GMV growth by targeting the right users with the right message.",
-            "Scalable Growth: Rtibid's platform allows ecommerce brands to scale their marketing efforts while maintaining efficiency."
+            "Increased Sales: RtiBid helps brands achieve incremental GMV growth by targeting the right users with the right message.",
+            "Scalable Growth: RtiBid's platform allows ecommerce brands to scale their marketing efforts while maintaining efficiency."
           ]
         }
       ]
@@ -225,7 +225,7 @@ const articles = [
               },
               {
                   "title": "Results",
-                  "content": "RtiBid has been a clear contributing factor to the fast growth of LOHILOs e-commerce. “When it comes to learning about consumers and point your marketing efforts in the right direction, digital display advertising is the winner without competition. Social Media and programmatic display is crucial to us, not only to drive traffic to our e-commerce, but also to build a long-term relationship with our customers”, says Richard Hertvig. LOHILO E-commerce Manager, Mikaela Reiserer agrees: “The need for a programmatic platform was obvious considering our young target audience. Today's 18 – 25 year olds don't spend their time on Facebook, which has previously been a crucial channel for us. We are seeing an increasing amount of young adults surfing the web on their mobiles and computers, which makes programmatic advertising a great channel for us”, says Mikaela Reiserer. “RTiBid has acted as an extension of our marketing team. They have helped us with everything from strategic advice and budget proposals, to graphics design of ads. The support combined with full transparency has really given us control of our campaigns”, Mikaela Reiserer concludes."
+                  "content": "RtiBid has been a clear contributing factor to the fast growth of LOHILOs e-commerce. “When it comes to learning about consumers and point your marketing efforts in the right direction, digital display advertising is the winner without competition. Social Media and programmatic display is crucial to us, not only to drive traffic to our e-commerce, but also to build a long-term relationship with our customers”, says Richard Hertvig. LOHILO E-commerce Manager, Mikaela Reiserer agrees: “The need for a programmatic platform was obvious considering our young target audience. Today's 18 – 25 year olds don't spend their time on Facebook, which has previously been a crucial channel for us. We are seeing an increasing amount of young adults surfing the web on their mobiles and computers, which makes programmatic advertising a great channel for us”, says Mikaela Reiserer. “RtiBid has acted as an extension of our marketing team. They have helped us with everything from strategic advice and budget proposals, to graphics design of ads. The support combined with full transparency has really given us control of our campaigns”, Mikaela Reiserer concludes."
               }
           ]
       }
@@ -247,7 +247,7 @@ const articles = [
               },
               {
                   "title": "Results",
-                  "content": "Herbmed's goal is to maintain a sustainable return on ad spend (ROAS) while continuing to increase brand awareness and sales – simple and effective. After seeing the simplicity of the platform and real-time reporting in a RtiBid demo, the choice was a no-brainer. “RTiBid has found the perfect synergy between a great self-service advertising platform and creative and strategic support for great results,” says George Duckett, Head of Marketing, Herbmed. With RtiBid's platform and skilled customer success team, Herbmed has not only maintained ROAS above 329% but also developed and fine-tuned its messaging. With the creative support of RtiBid's dedicated success manager, Herbmed was able to double its click-through rate (CTR). “Our partnership has been great so far. The assistance from our dedicated success manager surpass my expectations. We routinely have follow-ups with RtiBid covering everything from targeting improvements, A/B testing, and optimization of ads. We continue to see a return on ad spend above our expectations and are very satisfied with RtiBid. I look forward to continuing our partnership with them,” says George Duckett, Head of Marketing, Herbmed. RtiBid's unique platform has helped Herbmed with: Maintaining a high ROAS, Increasing conversions, A solution for creating banner ads directly on the platform, A/B testing messages and offers, Finding the right target audience."
+                  "content": "Herbmed's goal is to maintain a sustainable return on ad spend (ROAS) while continuing to increase brand awareness and sales – simple and effective. After seeing the simplicity of the platform and real-time reporting in a RtiBid demo, the choice was a no-brainer. “RtiBid has found the perfect synergy between a great self-service advertising platform and creative and strategic support for great results,” says George Duckett, Head of Marketing, Herbmed. With RtiBid's platform and skilled customer success team, Herbmed has not only maintained ROAS above 329% but also developed and fine-tuned its messaging. With the creative support of RtiBid's dedicated success manager, Herbmed was able to double its click-through rate (CTR). “Our partnership has been great so far. The assistance from our dedicated success manager surpass my expectations. We routinely have follow-ups with RtiBid covering everything from targeting improvements, A/B testing, and optimization of ads. We continue to see a return on ad spend above our expectations and are very satisfied with RtiBid. I look forward to continuing our partnership with them,” says George Duckett, Head of Marketing, Herbmed. RtiBid's unique platform has helped Herbmed with: Maintaining a high ROAS, Increasing conversions, A solution for creating banner ads directly on the platform, A/B testing messages and offers, Finding the right target audience."
               }
           ]
       }
@@ -275,7 +275,7 @@ const articles = [
           "sections": [
               {
                   "title": "About the client",
-                  "content": "Zen Pırlanta is one of the biggest jewelry brands in Turkey. They are growing rapidly and are opening new stores, as well as expanding their product line and adding perfumery to their portfolio. After seeing the increasing potential of e-commerce during the COVID-19 pandemic, Zen Pırlanta decided to invest more heavily in digital channels. In August 2020, they contacted RtiBid to expand their branding activities."
+                  "content": "Zen Pırlanta is one of the biggest jewelry brands in Turkey. They are growing rapidly and are opening new stores, as well as expanding their product line and adding perfumery to their portfolio. After seeing the increasing potential of e-commerce, Zen Pırlanta decided to invest more heavily in digital channels. In August 2020, they contacted RtiBid to expand their branding activities."
               },
               {
                   "title": "What they say about us",

@@ -4,7 +4,7 @@
     <div class="content-wrapper">
       <div class="stats-content" v-if="caseData.numList && caseData.numList.length > 0">
         <!-- 视频数据指标卡片 -->
-        <div class="stat-card" v-for="value in caseData.numList" :key="value.id">
+        <div class="stat-card" v-for="(value, index) in caseData.numList" :key="value.id" :class="{ 'last': index === caseData.numList.length - 1 }">
           <div class="stat-value">{{ value.value }}</div>
           <div class="stat-label">{{ value.name }}</div>
         </div>
@@ -63,8 +63,8 @@ const caseData = computed(() => {
 
 // 设计图风格变量
 @primary-color: #2D5AF1;    // 主色（设计图蓝色）
-@text-dark: #101828;        // 深色文本
-@text-gray: #4A5565;        // 灰色文本
+@text-dark: #1A1A1A;        // 深色文本
+@text-gray: #666666;        // 灰色文本
 @card-bg: #FFFFFF;          // 卡片背景
 @border-radius: 12px;       // 圆角
 @shadow: 0 4px 12px rgba(0, 0, 0, 0.08); // 阴影
@@ -93,69 +93,79 @@ const caseData = computed(() => {
   .stats-content {
     padding: 16px 0;
     margin: 0 auto 64px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px; // 卡片间距
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    
     .stat-card {
       text-align: center;
-      flex: 1;
-      min-width: 200px; // 最小宽度保证可读性
-      padding: 0 16px;
-      border-right: 1px solid #e5e7eb; // 分隔线
-    
-      &:last-child {
-        border-right: none; // 最后一个卡片无边框
+      padding: 0 32px;
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      
+      &:not(.last)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 20%;
+        bottom: 20%;
+        width: 1px;
+        background-color: #e5e7eb;
+      }
+      
+      .stat-value {
+        text-align: center;
+        font-family: D-DIN-PRO;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 44px; /* 122.222% */
+        letter-spacing: 0.369px;
+        background: linear-gradient(90deg, #19BBF8 0%, #8C35C7 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 8px;
+      }
+      
+      .stat-label {
+        color: var(--text2, #4A5565);
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.312px;
       }
     }
     
-    .stat-value {
-  
-      text-align: center;
-      font-family: D-DIN-PRO;
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 44px; /* 122.222% */
-      letter-spacing: 0.369px;
-      background: linear-gradient(90deg, #19BBF8 0%, #8C35C7 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    // 响应式设计
+    @media (max-width: @mobile-breakpoint) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      
+      .stat-card {
+        padding: 0 16px;
+        
+        &:not(.last)::after {
+          display: none;
+        }
+        
+        .stat-value {
+          font-size: 32px;
+          line-height: 40px;
+        }
+        
+        .stat-label {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
     }
-    
-    .stat-label {
-      color: var(--text2, #4A5565);
-      text-align: center;
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px; /* 150% */
-      letter-spacing: -0.312px;
-    }
-    
-    // // 响应式字体大小
-    // @media screen and (max-width: 768px) {
-    //   .stat-value {
-    //     font-size: 48px;
-    //   }
-    //   .stat-label {
-    //     font-size: 20px;
-    //   }
-    // }
-    
-    // @media screen and (max-width: 480px) {
-    //   .stat-value {
-    //     font-size: 36px;
-    //   }
-    //   .stat-label {
-    //     font-size: 16px;
-    //   }
-    //   .stats-content {
-    //     gap: 24px;
-    //   }
-    // }
   }
   // 案例标题
   .case-title {
@@ -164,7 +174,7 @@ const caseData = computed(() => {
     color: @text-dark;
     line-height: 1.3;
     margin: 0 0 20px 0;
-    text-align: center;
+    text-align: left;
 
     @media (min-width: @mobile-breakpoint) {
       font-size: 36px;
@@ -181,9 +191,9 @@ const caseData = computed(() => {
     font-size: 16px;
     color: @text-gray;
     line-height: 1.6;
-    margin: 0 auto 32px;
+    margin-bottom: 32px;
     max-width: 800px;
-    text-align: center;
+    text-align: left;
 
     @media (min-width: @mobile-breakpoint) {
       font-size: 18px;

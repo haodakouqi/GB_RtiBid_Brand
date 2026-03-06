@@ -135,6 +135,14 @@
   border: 1px solid @border-color;
   border-radius: @card-radius;
   background-color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    transform: translateY(-4px);
+    // border-color: rgba(0, 108, 255, 0.2);
+  }
 
   &__icon {
     flex-shrink: 0;
@@ -142,6 +150,11 @@
     height: 44px;
     border-radius: 10px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover &__icon {
+    transform: scale(1.05);
   }
 
   &__content {
@@ -159,6 +172,11 @@
     font-weight: 700;
     line-height: 32px; /* 133.333% */
     letter-spacing: 0.07px;
+    transition: color 0.3s ease;
+  }
+
+  &:hover &__title {
+    color: #006cff;
   }
 
   &__text {

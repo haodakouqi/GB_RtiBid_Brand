@@ -32,7 +32,9 @@
       </div>
     </nav>
     <router-view v-slot="{ Component, route }">
-      <component :is="Component" :key="route.fullPath" />
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="route.fullPath" />
+      </transition>
     </router-view>
     <Footer :navList="navList"></Footer>
   </div>
@@ -339,6 +341,17 @@ onUnmounted(() => {
   font-weight: 400;
   line-height: 28px; /* 140% */
   letter-spacing: -0.449px;
+}
+
+/* 路由过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 </style>

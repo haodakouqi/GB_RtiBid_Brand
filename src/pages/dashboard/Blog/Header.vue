@@ -36,14 +36,14 @@
   &__title {
     font-size: 48px;
     font-weight: 700;
-    color: #0f172a;
+    color: #101828;
     margin: 0 0 32px;
     line-height: 1.1;
   }
 
   &__subtitle {
     font-size: 20px;
-    color: #0f172a;
+    color: #101828;
     margin: 0;
     line-height: 1.4;
   }

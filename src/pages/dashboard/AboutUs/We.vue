@@ -1,12 +1,12 @@
 <template>
-  <section class="about-section">
-    <div class="about-section__container">
-      <h2 class="about-section__title">Who We Are</h2>
-      <div class="about-section__content">
-        <p class="about-section__paragraph">
+  <section class="we-section">
+    <div class="we-section__container">
+      <h2 class="we-section__title">Who We Are</h2>
+      <div class="we-section__content">
+        <p class="we-section__paragraph">
           RtiBid is an <strong>AI-powered</strong> performance DSP built for high-growth e-commerce brands. We combine advanced machine learning, deep user understanding, and global media reach to help advertisers achieve measurable revenue growth — efficiently, transparently, and at scale.
         </p>
-        <p class="about-section__paragraph">
+        <p class="we-section__paragraph">
           Our team <strong>brings years of experience</strong> working with top e-commerce players across the US, Europe, and APAC, delivering consistent ROAS lift and incremental sales through intelligent retargeting.
         </p>
       </div>
@@ -23,18 +23,33 @@
 @breakpoint: 768px;
 @desktop-padding-x: 24px;
 @mobile-padding-x: 16px;
-@title-color: #101828;
-@text-color: #4A5565;
-@strong-color: #155DFC;
+@title-color: #fff;
+@text-color: rgba(255, 255, 255, 0.60);;
+@strong-color: #fff;
 
-.about-section {
+.we-section {
+  position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 96px @desktop-padding-x; // 桌面端内边距
-
+  padding: 0 @desktop-padding-x; // 桌面端内边距
+  background: url('@/assets/AboutUs/Webg.png') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  // display: flex;
+  // align-items: center;
+  .we-section__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   &__container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 96px 0; // 桌面端内边距
   }
 
   &__title {
@@ -70,8 +85,8 @@
 
 // 响应式断点：768px 及以下
 @media (max-width: @breakpoint) {
-  .about-section {
-    padding: 48px @mobile-padding-x; // 移动端内边距
+  .we-section {
+    padding: 0 @mobile-padding-x; // 移动端内边距
 
     &__title {
       font-size: 36px;
